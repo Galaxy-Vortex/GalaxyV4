@@ -1,0 +1,260 @@
+[
+  {
+    "name": "1v1.lol",
+    "url": "https://1v1.lol",
+    "image": "1v1.jpg",
+    "genre": "Shooter"
+  },
+  {
+    "name": "ADOFAI",
+    "url": "https://w8.snokido.com/games/unity-webgl/dance-fire-and-ice/index.html",
+    "image": "adfi.png",
+    "genre": "Rhythm"
+  },
+  {
+    "name": "Baldi's Basics",
+    "url": "https://en.gameslol.net/data/baldis-basics/index.html",
+    "image": "baldi.jpg",
+    "genre": "Horror"
+  },
+  {
+    "name": "BitLife",
+    "url": "https://www.rapidwebapp.com/game/BitLife/index.html",
+    "image": "bitlife.png",
+    "genre": "Simulation"
+  },
+  {
+    "name": "BloonsTD",
+    "url": "https://games.crazygames.com/en_US/bloons-tower-defense/index.html?v=1.309",
+    "image": "bltd.png",
+    "genre": "Tower Defense"
+  },
+  {
+    "name": "Cluster Rush",
+    "url": "https://clusterrush.io/game/cluster-rush/",
+    "image": "cluster.jpg",
+    "genre": "Parkour"
+  },
+  {
+    "name": "Cookie Clicker",
+    "url": "https://welldeef.github.io/",
+    "image": "cookie.jpg",
+    "genre": "Idle"
+  },
+  {
+    "name": "Demonin's Item Shop",
+    "url": "https://www.demonin.com/games/",
+    "image": "demonin.jpg",
+    "genre": "Other"
+  },
+  {
+    "name": "Drift Hunters",
+    "url": "https://htmlxm.github.io/h/drift-hunters/",
+    "image": "drift.jpg",
+    "genre": "Racing"
+  },
+  {
+    "name": "eagtek(Minecraft)",
+    "url": "https://lite.3kh0.net/projects/minecraft/",
+    "image": "eagtek.jpg",
+    "genre": "Sandbox"
+  },
+  {
+    "name": "ev.io",
+    "url": "https://ev.io/",
+    "image": "ev.jpg",
+    "genre": "Shooter"
+  },
+  {
+    "name": "Fite.lol",
+    "url": "https://fite.lol/",
+    "image": "fite.webp",
+    "genre": "Fighting"
+  },
+  {
+    "name": "Helix Jump",
+    "url": "https://games.crazygames.com/en_US/helix-jump/index.html?v=1.319",
+    "image": "helix.jpg",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Hole.io",
+    "url": "https://holeio.me/g/41",
+    "image": "hole.jpeg",
+    "genre": "Multiplayer"
+  },
+  {
+    "name": "Madalin Stunt Cars",
+    "url": "https://madalinstuntcars2.io/game/",
+    "image": "madalin.jpg",
+    "genre": "Racing"
+  },
+  {
+    "name": "Moto X3M",
+    "url": "https://moto-x3m.net/main.html",
+    "image": "moto.jpg",
+    "genre": "Racing"
+  },
+  {
+    "name": "Paper.io",
+    "url": "https://paper-io.com/",
+    "image": "paperio.jpg",
+    "genre": "Multiplayer"
+  },
+  {
+    "name": "PolyTrack",
+    "file": "/games/polytrack",
+    "image": "polytrack.jpg",
+    "genre": "Racing"
+  },
+  {
+    "name": "Resent Client",
+    "url": "https://resent4-0.vercel.app/",
+    "image": "resent.png",
+    "genre": "Sandbox"
+  },
+  {
+    "name": "Slope",
+    "file": "/games/slope",
+    "image": "slope.png",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Slice Master",
+    "url": "https://games.crazygames.com/en_US/slice-master/index.html?v=1.319/",
+    "image": "slice.avif",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Space Waves",
+    "url": "https://games.crazygames.com/en_US/space-waves/index.html",
+    "image": "spacewaves.jpeg",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Stickman Warriors",
+    "url": "https://bitlifeonline.github.io/stickman-dragon-fight/",
+    "image": "stickman.jpg",
+    "genre": "Fighting"
+  },
+  {
+    "name": "SuperHot",
+    "url": "https://games.crazygames.com/en_US/super-hot/index.html?v=1.309",
+    "image": "superhot.jpg",
+    "genre": "Shooter"
+  },
+  {
+    "name": "Tactical Assasin 2",
+    "file": "/games/tacticalassasin2",
+    "image": "tactical.png",
+    "genre": "Shooter"
+  },
+  {
+    "name": "Tanuki Sunset",
+    "file": "/games/tanuki-sunset",
+    "image": "tanuki.jpg",
+    "genre": "Racing"
+  },
+  {
+    "name": "Throw Rocks",
+    "file": "/games/throwrocks",
+    "image": "throw.png",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Tiny Fishing",
+    "file": "/games/tiny-fishing",
+    "image": "tiny.jpg",
+    "genre": "Simulation"
+  },
+  {
+    "name": "Townscaper",
+    "file": "/games/townscaper",
+    "image": "town.jpg",
+    "genre": "Simulation"
+  },
+  {
+    "name": "Tube Jumpers",
+    "file": "/games/tube-jumpers",
+    "image": "tube.jpg",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Tunnel Rush",
+    "file": "/games/tunnel-rush",
+    "image": "tunnel.jpg",
+    "genre": "Arcade"
+  },
+  {
+    "name": "Two Player Tag",
+    "url": "https://games.construct.net/39/5545/embed.html?uid=0&o=1",
+    "image": "tpt.avif",
+    "genre": "Multiplayer"
+  },
+  {
+    "name": "Veloce",
+    "file": "/games/veloce",
+    "image": "veloce.jpg",
+    "genre": "Racing"
+  },
+  {
+    "name": "Venge.io",
+    "url": "https://venge.io/",
+    "image": "venge.webp",
+    "genre": "Shooter"
+  },
+  {
+    "name": "Vex 3",
+    "file": "/games/vex3",
+    "image": "v3.avif",
+    "genre": "Platformer"
+  },
+  {
+    "name": "Vex 4",
+    "file": "https://htmlxm.github.io/h9/vex-4/",
+    "image": "vex4.jpeg",
+    "genre": "Platformer"
+  },
+  {
+    "name": "Vex 5",
+    "file": "/games/vex5",
+    "image": "v5.jpg",
+    "genre": "Platformer"
+  },
+  {
+    "name": "Vex 6",
+    "file": "/games/vex6",
+    "image": "v6.webp",
+    "genre": "Platformer"
+  },
+  {
+    "name": "Vex 7",
+    "file": "/games/vex7",
+    "image": "v7.jpg",
+    "genre": "Platformer"
+  },
+  {
+    "name": "Weavesilk",
+    "file": "/games/weavesilk",
+    "image": "weave.jpg",
+    "genre": "Art"
+  },
+  {
+    "name": "WebGL Fluid Simulation",
+    "file": "/games/webgl-fluid-simulation",
+    "image": "optic.jpg",
+    "genre": "Simulation"
+  },
+  {
+    "name": "Wordle",
+    "file": "/games/wordle",
+    "image": "wordle.jpg",
+    "genre": "Puzzle"
+  },
+  {
+    "name": "xx142-b2exe",
+    "file": "/games/xx142-b2exe",
+    "image": "xx.jpg",
+    "genre": "Adventure"
+  }
+]
