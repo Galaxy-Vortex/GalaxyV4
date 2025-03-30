@@ -1,0 +1,14 @@
+{
+  "name": "galaxyv4",
+  "version": "1.0.1",
+  "description": "An advanced example using Chemical components.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chemicaljs": "^2.6.4",
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,31 @@
+.navbar {    
+
+  font-family: "Space Grotesk", serif;
+  font-weight: 500;
+  position: fixed;
+  left: -2rem;
+  border-radius: 10px;
+  padding: 4rem 0;
+  width: auto;
+}
+.navbar__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 10px;
+  transition: 250ms ease all;
+}
+.navbar__link:hover {
+  background-color: #a0a0a044;
+}
+.navbar__item {
+  margin: 3rem;
+  margin-top: 3rem;
+}
+ion-icon {
+  font-size: 2.5rem;
+  color: #c4c8e6;
+}
