@@ -29,3 +29,114 @@ ion-icon {
   font-size: 2.5rem;
   color: #c4c8e6;
 }
+.hamburger {
+  position: fixed;
+  z-index: 1;
+  left: 0rem;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  display: inline-block;
+}
+
+.hamburger,
+.navigation {
+  visibility: hidden;
+  transition: transform 0.3s 0.1s ease-in-out;
+}
+
+.hamburger--active {
+  position: fixed;
+  transform: translateX(80vw);
+}
+
+.hamburger__box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  left: 0;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  width: 100%;
+  height: 3px;
+  left: 0;
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  transition: transform 0.2s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before {
+  top: -10px;
+}
+
+.hamburger__inner::after {
+  top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner::before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.navigation {
+  z-index: 10;
+  background-color: #ffffff;
+  width: 80vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-80vw);
+}
+
+.navigation--active {
+  position: fixed;
+  transform: translateX(0);
+}
+
+.navigation__list {
+  color: black;
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 3rem;  
+}
+.navigation__item {
+  margin-top: 20px;
+}
+@media (max-width: 750px) {
+  .navbar {
+    visibility: hidden;
+  }
+}
+@media (max-width: 750px) {
+  .hamburger,
+.navigation {
+    visibility: visible;
+  }
+}
