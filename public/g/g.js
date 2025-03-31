@@ -24,7 +24,7 @@ fetch("g.json")
         } else if (game.file) {
           var fil = game.file;
           localStorage.setItem('gameload', fil);
-          window.location.href = "/gameload.html";
+          window.location.href = "/gameload";
         }
       });
 

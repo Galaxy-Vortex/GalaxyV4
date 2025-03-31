@@ -1,7 +1,7 @@
 {
   "name": "galaxyv4",
-  "version": "1.0.1",
-  "description": "An advanced example using Chemical components.",
+  "version": "4",
+  "description": "Surf the Galaxy with no limits...",
   "main": "index.js",
   "type": "module",
   "scripts": {

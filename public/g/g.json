@@ -103,7 +103,7 @@
   },
   {
     "name": "PolyTrack",
-    "file": "/games/polytrack",
+    "file": "/global/assets/polytrack",
     "image": "polytrack.jpg",
     "genre": "Racing"
   },
@@ -115,7 +115,7 @@
   },
   {
     "name": "Slope",
-    "file": "/games/slope",
+    "file": "/global/assets/slope",
     "image": "slope.png",
     "genre": "Arcade"
   },
@@ -145,43 +145,43 @@
   },
   {
     "name": "Tactical Assasin 2",
-    "file": "/games/tacticalassasin2",
+    "file": "/global/assets/tacticalassasin2",
     "image": "tactical.png",
     "genre": "Shooter"
   },
   {
     "name": "Tanuki Sunset",
-    "file": "/games/tanuki-sunset",
+    "file": "/global/assets/tanuki-sunset",
     "image": "tanuki.jpg",
     "genre": "Racing"
   },
   {
     "name": "Throw Rocks",
-    "file": "/games/throwrocks",
+    "file": "/global/assets/throwrocks",
     "image": "throw.png",
     "genre": "Arcade"
   },
   {
     "name": "Tiny Fishing",
-    "file": "/games/tiny-fishing",
+    "file": "/global/assets/tiny-fishing",
     "image": "tiny.jpg",
     "genre": "Simulation"
   },
   {
     "name": "Townscaper",
-    "file": "/games/townscaper",
+    "file": "/global/assets/townscaper",
     "image": "town.jpg",
     "genre": "Simulation"
   },
   {
     "name": "Tube Jumpers",
-    "file": "/games/tube-jumpers",
+    "file": "/global/assets/tube-jumpers",
     "image": "tube.jpg",
     "genre": "Arcade"
   },
   {
     "name": "Tunnel Rush",
-    "file": "/games/tunnel-rush",
+    "file": "/global/assets/tunnel-rush",
     "image": "tunnel.jpg",
     "genre": "Arcade"
   },
@@ -193,7 +193,7 @@
   },
   {
     "name": "Veloce",
-    "file": "/games/veloce",
+    "file": "/global/assets/veloce",
     "image": "veloce.jpg",
     "genre": "Racing"
   },
@@ -205,55 +205,55 @@
   },
   {
     "name": "Vex 3",
-    "file": "/games/vex3",
+    "file": "/global/assets/vex3",
     "image": "v3.avif",
     "genre": "Platformer"
   },
   {
     "name": "Vex 4",
-    "file": "https://htmlxm.github.io/h9/vex-4/",
+    "file": "httpsglobal/assets//htmlxm.github.io/h9/vex-4/",
     "image": "vex4.jpeg",
     "genre": "Platformer"
   },
   {
     "name": "Vex 5",
-    "file": "/games/vex5",
+    "file": "/global/assets/vex5",
     "image": "v5.jpg",
     "genre": "Platformer"
   },
   {
     "name": "Vex 6",
-    "file": "/games/vex6",
+    "file": "/global/assets/vex6",
     "image": "v6.webp",
     "genre": "Platformer"
   },
   {
     "name": "Vex 7",
-    "file": "/games/vex7",
+    "file": "/global/assets/vex7",
     "image": "v7.jpg",
     "genre": "Platformer"
   },
   {
     "name": "Weavesilk",
-    "file": "/games/weavesilk",
+    "file": "/global/assets/weavesilk",
     "image": "weave.jpg",
     "genre": "Art"
   },
   {
     "name": "WebGL Fluid Simulation",
-    "file": "/games/webgl-fluid-simulation",
+    "file": "/global/assets/webgl-fluid-simulation",
     "image": "optic.jpg",
     "genre": "Simulation"
   },
   {
     "name": "Wordle",
-    "file": "/games/wordle",
+    "file": "/global/assets/wordle",
     "image": "wordle.jpg",
     "genre": "Puzzle"
   },
   {
     "name": "xx142-b2exe",
-    "file": "/games/xx142-b2exe",
+    "file": "/global/assets/xx142-b2exe",
     "image": "xx.jpg",
     "genre": "Adventure"
   }
