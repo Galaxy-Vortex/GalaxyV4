@@ -1,6 +1,6 @@
 {
   "name": "galaxyv4",
-  "version": "4",
+  "version": "1.0.1",
   "description": "Surf the Galaxy with no limits...",
   "main": "index.js",
   "type": "module",
