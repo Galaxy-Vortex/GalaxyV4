@@ -37,7 +37,7 @@
           ></a>
         </div>
         <div class="navbar__item">
-          <a href="g.html" class="navbar__link"
+          <a href="/g" class="navbar__link"
             ><ion-icon name="game-controller-outline"></ion-icon>
           </a>
         </div>
@@ -79,10 +79,21 @@
     <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
     <script src="../global/js/nav.js"></script>
 
-    <input id="my-input" data-target="_blank" is="chemical-input" data-auto-https
-    data-search-engine="https://www.bing.com/search?q=%s"
-/>
-    <button data-for="my-input" is="chemical-button">Go!</button>
+    <input
+      autofocus
+      spellcheck="false"
+      autocomplete="off"
+      id="search"
+      data-frame="web"
+      data-auto-https
+      data-search-engine="https://www.bing.com/search?q=%s"
+      placeholder="Search or Enter a URL"
+      is="chemical-input"
+    />
+    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+    <button style="opacity:0;" data-for="search" is="chemical-button" id="submitbutton">
+      Go!
+    </button>
     <!-- GSAP -->
     <script src="../global/js/gsap.js"></script>
     <script src="animation.js"></script>

@@ -10,23 +10,11 @@ body {
   .navbar {
     opacity: 0;
   }
+  section {
+    background-color: #0e100f;
+  }
   #search {
-    animation: ghostin 1s ease-out 1s forwards;
     opacity: 0;
-    font-size: 14px;
-    height: 48px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    border: 1px solid rgb(255, 255, 255, 0.2);
-    outline: none;
-    background: none;
-    color: white;
-    width: 35rem;
-    background-image: url("img/search.png");
-    background-size: 20px;
-    background-position: 10px 15px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
   }
   
   #controls {

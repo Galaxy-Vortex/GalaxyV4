@@ -19,11 +19,8 @@ fetch("g.json")
         console.log('previous page is ' + window.location.href);
         if (game.url) {
           var ute = game.url;
-          if (localStorage.getItem("proxy") == "uv") {
-            ute = __uv$config.prefix + __uv$config.encodeUrl(ute);
-            localStorage.setItem("url", ute);
-            window.location.href = "/search.html";
-          } 
+          document.getElementById("search").value = ute;
+          document.getElementById("submitbutton").click();
         } else if (game.file) {
           var fil = game.file;
           localStorage.setItem('gameload', fil);
