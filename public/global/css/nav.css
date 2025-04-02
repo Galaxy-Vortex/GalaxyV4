@@ -1,11 +1,15 @@
-.navbar {    
+.navbar {
   font-family: "Space Grotesk", serif;
   font-weight: 500;
   position: fixed;
-  left: -2rem;
+  left: 0;
   border-radius: 10px;
-  padding: 4rem 0;
+  height: 100vh;
   width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
 }
 .navbar__link {
   position: relative;
@@ -20,17 +24,14 @@
 .navbar__link:hover {
   background-color: #a0a0a044;
 }
-.navbar__item {
-  margin: 3rem;
-  margin-top: 3rem;
-}
 ion-icon {
   font-size: 2.5rem;
   color: #ffffff;
 }
+
 .hamburger {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0rem;
   background-color: transparent;
   padding: 10px;
@@ -123,21 +124,47 @@ ion-icon {
   margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 3rem;  
+  font-size: 1rem;
 }
 .navigation__item {
   font-family: "Space Grotesk", serif;
   font-weight: 500;
   margin-top: 20px;
 }
+@media (max-height: 656px) {
+  ion-icon {
+    font-size: 2.5rem;
+  }
+  .navbar {
+    gap: 1rem;
+  }
+}
+@media (max-height: 400px) {
+  .navbar {
+    visibility: hidden;
+  }
+  .hamburger,
+  .navigation {
+    visibility: visible;
+  }
+
+}
+
 @media (max-width: 750px) {
   .navbar {
     visibility: hidden;
   }
-}
-@media (max-width: 750px) {
   .hamburger,
-.navigation {
+  .navigation {
     visibility: visible;
+  }
+}
+@media (min-width: 750px) {
+  .navbar {
+    visibility: visible;
+  }
+  .hamburger,
+  .navigation {
+    visibility: hidden;
   }
 }
