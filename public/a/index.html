@@ -16,7 +16,90 @@
     <script src="/chemical.components.js"></script>
   </head>
   <body>
+    <button class="hamburger">
+      <span class="hamburger__box">
+        <span class="hamburger__inner"></span>
+      </span>
+    </button>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item" onclick="window.location.href='/';">Home</li>
+        <li class="navigation__item"onclick="window.location.href='/g/';">Games</li>
+        <li class="navigation__item"onclick="window.location.href='/a/';">Apps</li>
+        <li class="navigation__item"onclick="window.location.href='https://discord.gg/6wQTrrfNcr';">Help</li>
+      </ul>
+    </nav>
+    <nav class="navbar">
+      <div class="navbar__menu">
+        <div class="navbar__item">
+          <a href="/" class="navbar__link"
+            ><ion-icon name="home-outline"></ion-icon
+          ></a>
+        </div>
+        <div class="navbar__item">
+          <a href="/g/" class="navbar__link"
+            ><ion-icon name="game-controller-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/a/" class="navbar__link"
+            ><ion-icon name="apps-outline"></ion-icon
+          ></a>
+        </div>
+        <div class="navbar__item">
+          <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"
+            ><ion-icon name="help-circle-outline"></ion-icon
+          ></a>
+        </div>
+        <div class="navbar__item">
+          <a href="/settings/" class="navbar__link"
+            ><ion-icon name="settings-outline"></ion-icon
+          ></a>
+        </div>
+      </div>
+    </nav>
     <h1 class="title">
-This Webpage is still under construction    </h1>
+      <span class="h1game h1one">A</span>
+      <span class="h1game h1two">P</span>
+      <span class="h1game h1three">P</span>
+      <span class="h1game h1four">S</span>
+    </h1>
+    <div class="games"></div>
+    <section id="controls" is="chemical-controls">
+      <button onclick="chemical.componentAction('back', 'web')">Back</button>
+      <button onclick="chemical.componentAction('forward', 'web')">
+        Forward
+      </button>
+      <button onclick="chemical.componentAction('reload', 'web')">
+        Reload
+      </button>
+      <button onclick="chemical.componentAction('close', 'web')">Close</button>
+    </section>
+    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+    <script src="../global/js/nav.js"></script>
+
+    <input
+      autofocus
+      spellcheck="false"
+      autocomplete="off"
+      id="search"
+      data-frame="web"
+      data-auto-https
+      data-search-engine="https://www.bing.com/search?q=%s"
+      placeholder="Search or Enter a URL"
+      is="chemical-input"
+    />
+    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+    <button style="opacity:0;" data-for="search" is="chemical-button" id="submitbutton">
+      Go!
+    </button>
+    <!-- GSAP -->
+    <script src="../global/js/gsap.js"></script>
+    <script src="animation.js"></script>
+    <script src="a.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
   </body>
 </html>

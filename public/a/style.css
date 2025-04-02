@@ -61,6 +61,7 @@ body {
     margin-top: 4rem;
     margin-bottom: 5rem;
     margin-left: 1.25rem;
+    letter-spacing: -4px;
   }
   .h1game {
     display: inline-block;
