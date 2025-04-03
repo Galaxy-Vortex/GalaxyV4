@@ -5,3 +5,8 @@ document.getElementById("search").addEventListener("keypress", function(event) {
     document.getElementById("controls").style.visibility = "visible";
   }
 });
+document.querySelector("select").addEventListener("change", function() {
+  const selectedValue = this.value; // Get the selected option's value
+  const searchInput = document.querySelector("#search"); // Get the input element
+  searchInput.setAttribute("data-service", selectedValue); // Set the data-service attribute
+});
