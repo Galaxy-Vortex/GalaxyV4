@@ -41,11 +41,11 @@ gsap.fromTo(
     ".h1four",
     {
       opacity: 0,
-      y: -50,
+      x: -50,
     },
     {
       opacity: 1,
-      y: 0,
+      x: 0,
       duration: 1.2,
       ease: "expo.inOut",
     }
