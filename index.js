@@ -6,7 +6,7 @@ const [app, listen] = new ChemicalServer({
     default: "scramjet", 
     uv: "true",
     scramjet: "true",
-    rh: "true",
+    rh: "false",
 });
 const port = process.env.PORT || 3000;
 
