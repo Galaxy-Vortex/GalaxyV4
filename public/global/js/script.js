@@ -11,22 +11,3 @@ document.querySelector("select").addEventListener("change", function () {
   searchInput.setAttribute("data-service", selectedValue); // Set the data-service attribute
 });
 
-
-/*
-// Get the dropdown element
-const dropdown = document.getElementById('myDropdown');
-
-// On page load, set the selected value based on localStorage
-window.onload = function () {
-  const savedValue = localStorage.getItem('dropdownValue');
-  if (savedValue) {
-    dropdown.value = savedValue;
-  }
-};
-
-// Save the selected value whenever it changes
-dropdown.addEventListener('change', function () {
-  localStorage.setItem('dropdownValue', dropdown.value);
-});
-
-*/
