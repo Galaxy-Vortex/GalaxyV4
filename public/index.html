@@ -1,117 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Surf the Galaxy with no limits..."
-    />
-    <title>GalaxyV4</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="global/css/style.css" />
-    <link rel="stylesheet" href="global/css/fonts.css" />
-    <link rel="stylesheet" href="global/css/nav.css" />
 
-    <script src="/chemical.js"></script>
-    <script src="/chemical.components.js"></script>
-  </head>
-  <body>
-    <button class="hamburger">
-      <span class="hamburger__box">
-        <span class="hamburger__inner"></span>
-      </span>
-    </button>
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item" onclick="window.location.href='/';">
-          Home
-        </li>
-        <li class="navigation__item" onclick="window.location.href='/g';">
-          Games
-        </li>
-        <li class="navigation__item" onclick="window.location.href='/a';">
-          Apps
-        </li>
-        <li
-          class="navigation__item"
-          onclick="window.location.href='https://discord.gg/6wQTrrfNcr';"
-        >
-          Help
-        </li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Surf the Galaxy with no limits..." />
+  <title>GalaxyV4</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="global/css/style.css" />
+  <link rel="stylesheet" href="global/css/fonts.css" />
+  <link rel="stylesheet" href="global/css/nav.css" />
 
-    <nav class="navbar">
-      <div class="navbar__item">
-        <a href="/" class="navbar__link"
-          ><ion-icon name="home-outline"></ion-icon
-        ></a>
-      </div>
-      <div class="navbar__item">
-        <a href="g/" class="navbar__link"
-          ><ion-icon name="game-controller-outline"></ion-icon>
-        </a>
-      </div>
-      <div class="navbar__item">
-        <a href="a/" class="navbar__link"
-          ><ion-icon name="apps-outline"></ion-icon
-        ></a>
-      </div>
-      <div class="navbar__item">
-        <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"
-          ><ion-icon name="help-circle-outline"></ion-icon
-        ></a>
-      </div>
-      <div class="navbar__item">
-        <a href="settings/" class="navbar__link"
-          ><ion-icon name="settings-outline"></ion-icon
-        ></a>
-      </div>
-    </nav>
-    <div class="centerdiv">
-      <h1>
-        <span class="galaxy h1one">G</span> <span class="galaxy h1two">A</span>
-        <span class="galaxy h1three">L</span>
-        <span class="galaxy h1four">A</span>
-        <span class="galaxy h1five">X</span>
-        <span class="galaxy h1six">Y</span>
-      </h1>
-      <input
-        autofocus
-        spellcheck="false"
-        autocomplete="off"
-        id="search"
-        data-frame="web"
-        data-auto-https
-        data-search-engine="https://www.bing.com/search?q=%s"
-        placeholder="Search or Enter a URL"
-        is="chemical-input"
-      />
-  
+  <script src="/chemical.js"></script>
+  <script src="/chemical.components.js"></script>
+</head>
+
+<body>
+  <button class="hamburger">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item" onclick="window.location.href='/';">
+        Home
+      </li>
+      <li class="navigation__item" onclick="window.location.href='/g';">
+        Games
+      </li>
+      <li class="navigation__item" onclick="window.location.href='/a';">
+        Apps
+      </li>
+      <li class="navigation__item" onclick="window.location.href='https://discord.gg/6wQTrrfNcr';">
+        Help
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="navbar">
+    <div class="navbar__item">
+      <a href="/" class="navbar__link"><ion-icon name="home-outline"></ion-icon></a>
     </div>
+    <div class="navbar__item">
+      <a href="g/" class="navbar__link"><ion-icon name="game-controller-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="navbar__item">
+      <a href="a/" class="navbar__link"><ion-icon name="apps-outline"></ion-icon></a>
+    </div>
+    <div class="navbar__item">
+      <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"><ion-icon name="help-circle-outline"></ion-icon></a>
+    </div>
+    <div class="navbar__item">
+      <a href="settings/" class="navbar__link"><ion-icon name="settings-outline"></ion-icon></a>
+    </div>
+  </nav>
+  <div class="centerdiv">
+    <h1>
+      <span class="galaxy h1one">G</span> <span class="galaxy h1two">A</span>
+      <span class="galaxy h1three">L</span>
+      <span class="galaxy h1four">A</span>
+      <span class="galaxy h1five">X</span>
+      <span class="galaxy h1six">Y</span>
+    </h1>
+    <input autofocus spellcheck="false" autocomplete="off" id="search" data-frame="web" data-auto-https
+      data-search-engine="https://www.bing.com/search?q=%s" placeholder="Search or Enter a URL" is="chemical-input" />
+    <select id="selector">
+      <option value="uv">Ultraviolet</option>
+      <option value="rh">Rammerhead</option>
+      <option value="scramjet">Scramjet</option>
+    </select>
 
-    <section id="controls" is="chemical-controls">
-      <button onclick="chemical.componentAction('back', 'web')">Back</button>
-      <button onclick="chemical.componentAction('forward', 'web')">
-        Forward
-      </button>
-      <button onclick="chemical.componentAction('reload', 'web')">
-        Reload
-      </button>
-      <button onclick="chemical.componentAction('close', 'web')">Close</button>
-    </section>
-    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
-    <script src="global/js/nav.js"></script>
-    
-    <!--UV stuff-->
-    <script src="global/js/script.js"></script>
-    <!-- GSAP -->
-    <script src="global/js/gsap.js"></script>
-    <script src="animation.js"></script>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
-    ></script>
-  </body>
+  </div>
+
+  <section id="controls" is="chemical-controls">
+    <button onclick="chemical.componentAction('back', 'web')">Back</button>
+    <button onclick="chemical.componentAction('forward', 'web')">
+      Forward
+    </button>
+    <button onclick="chemical.componentAction('reload', 'web')">
+      Reload
+    </button>
+    <button onclick="chemical.componentAction('close', 'web')">Close</button>
+  </section>
+  <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+  <script src="global/js/nav.js"></script>
+
+  <!--UV stuff-->
+  <script src="global/js/script.js"></script>
+  <!-- GSAP -->
+  <script src="global/js/gsap.js"></script>
+  <script src="animation.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
 </html>
