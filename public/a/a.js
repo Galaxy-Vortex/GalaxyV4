@@ -20,6 +20,9 @@ fetch("a.json")
           var ute = game.url;
           document.getElementById("search").value = ute;
           document.getElementById("submitbutton").click();
+          document.getElementById("web").style.visibility = "visible";
+          document.getElementById("controls").style.visibility = "visible";
+      
         } else if (game.file) {
           var fil = game.file;
           localStorage.setItem('gameload', fil);
