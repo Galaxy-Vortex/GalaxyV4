@@ -9,7 +9,7 @@ fetch("g.json")
       gameElement.dataset.index = index; 
 
       gameElement.innerHTML = `
-        <img src="/global/img/${game.image}" alt="${game.name}" class="cards">
+        <img src="/global/img/${game.image}" alt="${game.name}" class="cards" loading="lazy">
         <h3 class="cardname">${game.name}</h3>
         <h3 class="cardgenre">${game.genre}</h3>
       `;
