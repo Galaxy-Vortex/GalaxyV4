@@ -114,16 +114,22 @@
     "genre": "Sandbox"
   },
   {
+    "name": "Slice Master",
+    "url": "https://games.crazygames.com/en_US/slice-master/index.html?v=1.319/",
+    "image": "slice.avif",
+    "genre": "Arcade"
+  },
+  {
     "name": "Slope",
     "file": "/global/assets/slope",
     "image": "slope.png",
     "genre": "Arcade"
   },
   {
-    "name": "Slice Master",
-    "url": "https://games.crazygames.com/en_US/slice-master/index.html?v=1.319/",
-    "image": "slice.avif",
-    "genre": "Arcade"
+    "name": "Slow Roads",
+    "file": "/global/assets/slow-roads",
+    "image": "slowroads.jpg",
+    "genre": "Car"
   },
   {
     "name": "Space Waves",

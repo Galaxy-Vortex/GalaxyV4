@@ -5,7 +5,6 @@ gsap.fromTo(
     x: -40,
   },
   {
-    delay: 0.3,
     opacity: 1,
     x: 0,
     duration: 1.2,
@@ -19,6 +18,7 @@ gsap.fromTo(
       y: -20,
     },
     {
+      delay: 0.3,
       opacity: 1,
       y: 0,
       duration: 1.2,
