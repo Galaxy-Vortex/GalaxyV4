@@ -3,18 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GalaxyV4</title>  
-<link rel="preload" href="">
+    <title>GalaxyV4</title>
+    <link rel="preload" href="" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../global/css/fonts.css" />
     <script src="settings/setting.js"></script>
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXG0KPC43X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MXG0KPC43X');
+</script>
+
   <body>
     <section class="controls">
       <button class="back web" onclick="back()">Back</button>
       <button class="forward web" onclick="forward()">Forward</button>
       <button class="reload web" onclick="reload()">Reload</button>
-      <button class="close web" onclick="window.location.href='/g';">Close</button>
+      <button class="close web" onclick="window.location.href='/g';">
+        Close
+      </button>
     </section>
     <iframe src="" frameborder="0" id="game"></iframe>
     <script>
