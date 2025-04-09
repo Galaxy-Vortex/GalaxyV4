@@ -6,6 +6,39 @@ body {
   background-color: #0e100f;
   color: white;
 }
+.gradient-container {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  width: 90vw;
+}
+.gradient-1,
+.gradient-2,
+.gradient-3 {
+  z-index: -10;
+}
+.gradient-2 {
+  opacity: 0;
+  position: absolute;
+  height: 384px;
+  width: 384px;
+  border-radius: 50%;
+  background-color: #6ad1fa;
+  top: -25.5rem;
+  left: 50%;
+  filter: blur(150px);
+  animation: ghostin 1s ease-out 0.7s forwards;
+}
+.gradient-3 {
+  position: absolute;
+  height: 384px;
+  width: 384px;
+  border-radius: 50%;
+  background-color: #f8f8ffb6;
+  top: -15.5rem;
+  left: 20%;
+  filter: blur(300px);
+}
 
 #search {
   animation: ghostin 1s ease-out 0.5s forwards;

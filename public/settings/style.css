@@ -138,7 +138,7 @@ button {
   }
 }
 .circle:hover, button:hover {
-  box-shadow: 0 0 30px rgba(217, 205, 237, 0.5);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.158);
 }
 
 @media (max-width: 768px) {

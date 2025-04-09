@@ -53,3 +53,16 @@ gsap.fromTo(
     ease: "expo.inOut",
   }
 );
+gsap.fromTo(
+  ".gradient-3",
+  {
+    opacity: 0,
+    y: -50,
+  },
+  {
+    opacity: 1,
+    y: -0,
+    ease: "expo.inOut",
+    duration: 1.2,
+  }
+);
