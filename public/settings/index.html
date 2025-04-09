@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Surf the Galaxy with no limits..." />
+    <title>GalaxyV4</title>
+    <link rel="preload" href="" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../global/css/style.css" />
+    <link rel="stylesheet" href="../global/css/fonts.css" />
+    <link rel="stylesheet" href="../global/css/nav.css" />
+    <script src="setting.js"></script>
+    <script src="/chemical.js"></script>
+    <script src="/chemical.cloaking.js"></script>
+    <script src="/chemical.components.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Surf the Galaxy with no limits..." />
-  <title>GalaxyV4</title>  
-<link rel="preload" href="">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="../global/css/style.css" />
-  <link rel="stylesheet" href="../global/css/fonts.css" />
-  <link rel="stylesheet" href="../global/css/nav.css" />
-  <script src="/chemical.js"></script>
-  <script src="/chemical.components.js"></script>
-</head>
+  <body>
+    <button class="hamburger">
+      <span class="hamburger__box">
+        <span class="hamburger__inner"></span>
+      </span>
+    </button>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item" onclick="window.location.href='/';">
+          Home
+        </li>
+        <li class="navigation__item" onclick="window.location.href='/g';">
+          Games
+        </li>
+        <li class="navigation__item" onclick="window.location.href='/a';">
+          Apps
+        </li>
+        <li
+          class="navigation__item"
+          onclick="window.location.href='https://discord.gg/6wQTrrfNcr';"
+        >
+          Help
+        </li>
+      </ul>
+    </nav>
+    <nav class="navbar">
+      <div class="navbar__item">
+        <a href="/" class="navbar__link"
+          ><ion-icon name="home-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="navbar__item">
+        <a href="/g/" class="navbar__link"
+          ><ion-icon name="game-controller-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="navbar__item">
+        <a href="/a/" class="navbar__link"
+          ><ion-icon name="apps-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="navbar__item">
+        <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"
+          ><ion-icon name="help-circle-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="navbar__item">
+        <a href="/settings/" class="navbar__link"
+          ><ion-icon name="settings-outline"></ion-icon
+        ></a>
+      </div>
+    </nav>
+    <h1 class="title">
+      <span class="h1game h1one">S</span>
+      <span class="h1game h1two">E</span>
+      <span class="h1game h1three">T</span>
+      <span class="h1game h1four">T</span>
+      <span class="h1game h1five">I</span>
+      <span class="h1game h1six">N</span>
+      <span class="h1game h1sevan">G</span>
+      <span class="h1game h1eight">S</span>
+    </h1>
+    <div class="settings">
+      <div class="settingcontainer">
+        <h2>About:Blank Cloaker</h2>
+        <h3>About:Blank will hide the website's URL</h3>
+        <button onclick="chemical.aboutBlank('index.html')">Launch</button>
+      </div>
+      <div class="settingcontainer">
+        <h2>Auto Cloaker</h2>
+        <h3>Automatically launches About:Blank, preventing the website from appearing in your history</h3>
+        <input type="checkbox" id="autoABToggle" data-on="ON" data-off="OFF" role="switch" class="circle" onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'" class="settingButton"/>
+      </div>
+      <script>
+        // Check if localStorage has a value for autoAB, if not set it to true
+        if (localStorage.getItem("autoAB") === null) {
+            localStorage.setItem("autoAB", "false");
+        }
+      
+        // Set the checkbox based on localStorage value
+        document.getElementById("autoABToggle").checked =
+            localStorage.getItem("autoAB") === "true";
 
-<body>
-  <button class="hamburger">
-    <span class="hamburger__box">
-      <span class="hamburger__inner"></span>
-    </span>
-  </button>
-  <nav class="navigation">
-    <ul class="navigation__list">
-      <li class="navigation__item" onclick="window.location.href='/';">Home</li>
-      <li class="navigation__item" onclick="window.location.href='/g';">Games</li>
-      <li class="navigation__item" onclick="window.location.href='/a';">Apps</li>
-      <li class="navigation__item" onclick="window.location.href='https://discord.gg/6wQTrrfNcr';">Help</li>
-    </ul>
-  </nav>
-  <nav class="navbar">
-    <div class="navbar__item">
-      <a href="/" class="navbar__link"><ion-icon name="home-outline"></ion-icon></a>
-    </div>
-    <div class="navbar__item">
-      <a href="/g/" class="navbar__link"><ion-icon name="game-controller-outline"></ion-icon>
-      </a>
-    </div>
-    <div class="navbar__item">
-      <a href="/a/" class="navbar__link"><ion-icon name="apps-outline"></ion-icon></a>
-    </div>
-    <div class="navbar__item">
-      <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"><ion-icon name="help-circle-outline"></ion-icon></a>
-    </div>
-    <div class="navbar__item">
-      <a href="/settings/" class="navbar__link"><ion-icon name="settings-outline"></ion-icon></a>
-    </div>
-  </nav>
-  <h1 class="title">
-    Still under development...
-    <!-- <span class="h1game h1one">S</span>
-    <span class="h1game h1two">E</span>
-    <span class="h1game h1three">T</span>
-    <span class="h1game h1four">T</span>
-    <span class="h1game h1five">I</span>
-    <span class="h1game h1six">N</span>
-    <span class="h1game h1sevan">G</span>
-    <span class="h1game h1eight">S</span>
+      
+        // Update localStorage value when the checkbox is changed
+        document.getElementById("autoABToggle").addEventListener("change", function() {
+            localStorage.setItem("autoAB", this.checked);
+            if (this.checked) {
+              location.reload()
+              checkPopupsBlocked();
+            }
 
-  </h1>
-  <script src="../global/js/script.js"></script>
-  <script src="../global/js/nav.js"></script>
-  </button> --!>
-  <!-- GSAP -->
-  <script src="../global/js/gsap.js"></script>
-  <script src="animation.js"></script>
-  <script src="setting.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-</body>
-
+        });
+      </script>
+      <!--
+      <div class="settingcontainer">
+        <h2>Anti-Close</h2>
+        <button>Launch</button>
+      </div>
+-->
+    </div>
+    <script src="../global/js/script.js"></script>
+    <script src="../global/js/nav.js"></script>
+    <!-- GSAP -->
+    <script src="../global/js/gsap.js"></script>
+    <script src="animation.js"></script>
+    <script src="setting.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
 </html>
+<script>
+    document.getElementById("autoABToggle").innerHTML = localStorage.getItem('autoAB') == 'true' ? 'Disable' : 'Enable';
+</script>
