@@ -4,7 +4,8 @@
 
 ## About Galaxy📑
 
-Galaxy is a minimalistic open source proxy that is capable of evading internet censorship. Galaxy uses Ultraviolet V3- the fastest and lastest version. It also includes a vast collection of games that will continuously expand as the site grows. 
+Galaxy is a minimalistic open source proxy that is capable of evading internet censorship. Galaxy uses Chemical.JS, which is harder to detect and fast. It also contains a vast collection of games that will continuously expand as the site grows. Join [Falcon Networks](https://discord.gg/xM8FvSAttG) for more links!
+
 
 ## Demo 🏴󠁺󠁡󠁦󠁳󠁿
 
@@ -40,7 +41,7 @@ npm start
 <br>
 
 ## A look inside👀
-
+<span style="color:rgb(212, 65, 65)"> Note: GalaxyV4 is still under development and have many more updates to come </span>
 <br>
 
 ### Home screen
@@ -57,7 +58,7 @@ npm start
 
 ### Proxy
 
-![Proxy](img/proxy.png)
+![Settings](img/setting.png)
 
 ## Credits
 
