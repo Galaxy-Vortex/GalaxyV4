@@ -1,108 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Surf the Galaxy with no limits..." />
+    <title>GalaxyV4</title>
+    <link rel="preload" href="" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global/css/style.css" />
+    <link rel="stylesheet" href="global/css/fonts.css" />
+    <link rel="stylesheet" href="global/css/nav.css" />
+    <script src="settings/setting.js"></script>
+    <script src="/chemical.js"></script>
+    <script src="/chemical.components.js"></script>
+    <script src="/chemical.cloaking.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-MXG0KPC43X"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Surf the Galaxy with no limits..." />
-  <title>GalaxyV4</title>
-  <link rel="preload" href="">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="global/css/style.css" />
-  <link rel="stylesheet" href="global/css/fonts.css" />
-  <link rel="stylesheet" href="global/css/nav.css" />
-  <script src="settings/setting.js"></script>
-  <script src="/chemical.js"></script>
-  <script src="/chemical.components.js"></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXG0KPC43X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    gtag("config", "G-MXG0KPC43X");
+  </script>
 
-  gtag('config', 'G-MXG0KPC43X');
-</script>
-
-<body>
-  <div class="gradient-container">
-    <div class="gradient-1"></div>
-    <div class="gradient-2"></div>
-    <div class="gradient-3"></div>
-  </div>
-  <button class="hamburger">
-    <span class="hamburger__box">
-      <span class="hamburger__inner"></span>
-    </span>
-  </button>
-  <nav class="navigation">
-    <ul class="navigation__list">
-      <li class="navigation__item" onclick="window.location.href='/';">
-        Home
-      </li>
-      <li class="navigation__item" onclick="window.location.href='/g';">
-        Games
-      </li>
-      <li class="navigation__item" onclick="window.location.href='/a';">
-        Apps
-      </li>
-      <li class="navigation__item" onclick="window.location.href='https://discord.gg/6wQTrrfNcr';">
-        Help
-      </li>
-    </ul>
-  </nav>
-
-  <nav class="navbar">
-    <div class="navbar__item">
-      <a href="/" class="navbar__link"><ion-icon name="home-outline"></ion-icon></a>
+  <body>
+    <div class="gradient-container">
+      <div class="gradient-1"></div>
+      <div class="gradient-2"></div>
+      <div class="gradient-3"></div>
     </div>
-    <div class="navbar__item">
-      <a href="/g/" class="navbar__link"><ion-icon name="game-controller-outline"></ion-icon>
-      </a>
-    </div>
-    <div class="navbar__item">
-      <a href="/a/" class="navbar__link"><ion-icon name="apps-outline"></ion-icon></a>
-    </div>
-    <div class="navbar__item">
-      <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"><ion-icon name="help-circle-outline"></ion-icon></a>
-    </div>
-    <div class="navbar__item">
-      <a href="/settings/" class="navbar__link"><ion-icon name="settings-outline"></ion-icon></a>
-    </div>
-  </nav>
-  <div class="centerdiv">
-    <h1>
-      <span class="galaxy h1one">G</span> <span class="galaxy h1two">A</span>
-      <span class="galaxy h1three">L</span>
-      <span class="galaxy h1four">A</span>
-      <span class="galaxy h1five">X</span>
-      <span class="galaxy h1six">Y</span>
-    </h1>
-    <input autofocus spellcheck="false" autocomplete="off" id="search" data-frame="web" data-auto-https
-      data-search-engine="https://www.bing.com/search?q=%s" placeholder="Search or Enter a URL" is="chemical-input" />
-
-  </div>
-
-  <section id="controls" is="chemical-controls">
-    <button onclick="chemical.componentAction('back', 'web')">Back</button>
-    <button onclick="chemical.componentAction('forward', 'web')">
-      Forward
+    <button class="hamburger">
+      <span class="hamburger__box">
+        <span class="hamburger__inner"></span>
+      </span>
     </button>
-    <button onclick="chemical.componentAction('reload', 'web')">
-      Reload
-    </button>
-    <button onclick="chemical.componentAction('close', 'web')">Close</button>
-  </section>
-  <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
-  <script src="global/js/nav.js"></script>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item" onclick="window.location.href='/';">
+          Home
+        </li>
+        <li class="navigation__item" onclick="window.location.href='/g';">
+          Games
+        </li>
+        <li class="navigation__item" onclick="window.location.href='/a';">
+          Apps
+        </li>
+        <li
+          class="navigation__item"
+          onclick="window.location.href='https://discord.gg/6wQTrrfNcr';"
+        >
+          Help
+        </li>
+      </ul>
+    </nav>
 
-  <!--UV stuff-->
-  <script src="global/js/script.js"></script>
-  <!-- GSAP -->
-  <script src="global/js/gsap.js"></script>
-  <script src="animation.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-</body>
+    <nav class="navbar">
+      <div class="navbar__item">
+        <a href="/" class="navbar__link"
+          ><ion-icon name="home-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="navbar__item">
+        <a href="/g/" class="navbar__link"
+          ><ion-icon name="game-controller-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="navbar__item">
+        <a href="/a/" class="navbar__link"
+          ><ion-icon name="apps-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="navbar__item">
+        <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"
+          ><ion-icon name="help-circle-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="navbar__item">
+        <a href="/settings/" class="navbar__link"
+          ><ion-icon name="settings-outline"></ion-icon
+        ></a>
+      </div>
+    </nav>
 
+    <div class="centerdiv">
+      <h1>
+        <span class="galaxy h1one">G</span>
+        <span class="galaxy h1two">A</span>
+        <span class="galaxy h1three">L</span>
+        <span class="galaxy h1four">A</span>
+        <span class="galaxy h1five">X</span>
+        <span class="galaxy h1six">Y</span>
+      </h1>
+      <h3 class="slogan">Surf the Galaxy with no limits...</h3>
+      <input
+        autofocus
+        spellcheck="false"
+        autocomplete="off"
+        id="search"
+        data-frame="web"
+        data-auto-https
+        data-search-engine="https://www.bing.com/search?q=%s"
+        placeholder="Search or Enter a URL"
+        is="chemical-input"
+      />
+    </div>
+    <section class="features">
+      <div class="features-grid">
+        <div class="feature-card">
+          <i
+            data-lucide="zap"
+            class="feature-icon"
+            style="width: 48px; height: 48px"
+          ></i>
+          <h3>Lightning Fast</h3>
+          <p>- Uses Ultraviolet 3.2.7 - the lates and fastest version</p>
+        </div>
+        <div class="feature-card">
+          <i
+            data-lucide="shield"
+            class="feature-icon"
+            style="width: 48px; height: 48px"
+          ></i>
+          <h3>Secure by Default</h3>
+          <p>
+            - Hides your IP address, making it harder for websites to track you
+            online activity
+          </p>
+          <p>- Shields against cyber threats and malicious websites</p>
+        </div>
+        <div class="feature-card">
+          <i
+            data-lucide="sparkles"
+            class="feature-icon"
+            style="width: 48px; height: 48px"
+          ></i>
+          <h3>Beautiful Interface</h3>
+          <p>
+            - Incorporates modern and sleek designs to make your experience
+            seemingless
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="ab" onclick="chemical.aboutBlank('index.html')">
+      Open About:Blank
+    </div>    
+    <section id="controls" is="chemical-controls">
+      <button onclick="chemical.componentAction('back', 'web')">Back</button>
+      <button onclick="chemical.componentAction('forward', 'web')">
+        Forward
+      </button>
+      <button onclick="chemical.componentAction('reload', 'web')">
+        Reload
+      </button>
+      <button onclick="chemical.componentAction('close', 'web')">Close</button>
+    </section>
+    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+    <script src="global/js/nav.js"></script>
+
+    <!--UV stuff-->
+    <script src="global/js/script.js"></script>
+    <!-- GSAP -->
+    <script src="global/js/gsap.js"></script>
+    <script src="animation.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      // Observe elements
+      document
+        .querySelectorAll(
+          ".feature-card, .performance-content, .performance-image"
+        )
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
+  </body>
 </html>
