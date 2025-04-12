@@ -165,7 +165,7 @@ a:checked + .highlight {
   border-radius: 10px;
 }
 .game:hover img {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .cardname {
   position: absolute;
