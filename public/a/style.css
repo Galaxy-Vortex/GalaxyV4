@@ -67,6 +67,7 @@ section {
 }
 .h1game {
   display: inline-block;
+  opacity: 0;
 }
 .games {
   width: 90vw;

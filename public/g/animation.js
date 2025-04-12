@@ -71,5 +71,11 @@ gsap.fromTo(
       duration: 1.2
     }
   );
-
-
+gsap.to (
+  ".games",
+  {
+    opacity: 1,
+    duration: 0.5,
+    delay: 0.8
+  }
+);

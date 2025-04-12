@@ -3,7 +3,7 @@
     "name": "1v1.lol",
     "url": "https://1v1.lol",
     "image": "1v1.jpg",
-    "genre": "Shooter"
+    "genre": "Action"
   },
   {
     "name": "ADOFAI",
@@ -33,13 +33,13 @@
     "name": "Cluster Rush",
     "url": "https://clusterrush.io/game/cluster-rush/",
     "image": "cluster.jpg",
-    "genre": "Parkour"
+    "genre": "Platformer"
   },
   {
     "name": "Cookie Clicker",
     "url": "https://welldeef.github.io/",
     "image": "cookie.jpg",
-    "genre": "Idle"
+    "genre": "Casual"
   },
   {
     "name": "Demonin's Item Shop",
@@ -51,25 +51,25 @@
     "name": "Drift Hunters",
     "url": "https://htmlxm.github.io/h/drift-hunters/",
     "image": "drift.jpg",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "eagtek(Minecraft)",
     "url": "https://lite.3kh0.net/projects/minecraft/",
     "image": "eagtek.jpg",
-    "genre": "Sandbox"
+    "genre": "Multiplayer"
   },
   {
     "name": "ev.io",
     "url": "https://ev.io/",
     "image": "ev.jpg",
-    "genre": "Shooter"
+    "genre": "Action"
   },
   {
     "name": "Fite.lol",
     "url": "https://fite.lol/",
     "image": "fite.webp",
-    "genre": "Fighting"
+    "genre": "Action"
   },
   {
     "name": "Helix Jump",
@@ -87,13 +87,13 @@
     "name": "Madalin Stunt Cars",
     "url": "https://games.crazygames.com/en_US/madalin-stunt-cars-2/index.html?v=1.328/",
     "image": "madalin.jpg",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "Moto X3M",
     "url": "https://moto-x3m.net/main.html",
     "image": "moto.jpg",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "Paper.io",
@@ -105,13 +105,13 @@
     "name": "PolyTrack",
     "file": "/global/assets/polytrack",
     "image": "polytrack.jpg",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "Resent Client",
     "url": "https://resent4-0.vercel.app/",
     "image": "resent.png",
-    "genre": "Sandbox"
+    "genre": "Multiplayer"
   },
   {
     "name": "Slice Master",
@@ -141,25 +141,25 @@
     "name": "Stickman Warriors",
     "url": "https://bitlifeonline.github.io/stickman-dragon-fight/",
     "image": "stickman.jpg",
-    "genre": "Fighting"
+    "genre": "Action"
   },
   {
     "name": "SuperHot",
     "url": "https://games.crazygames.com/en_US/super-hot/index.html?v=1.309",
     "image": "superhot.jpg",
-    "genre": "Shooter"
+    "genre": "Action"
   },
   {
     "name": "Tactical Assasin 2",
     "file": "/global/assets/tacticalassasin2",
     "image": "tactical.png",
-    "genre": "Shooter"
+    "genre": "Action"
   },
   {
     "name": "Tanuki Sunset",
     "file": "/global/assets/tanuki-sunset",
     "image": "tanuki.jpg",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "Throw Rocks",
@@ -201,13 +201,13 @@
     "name": "Veloce",
     "file": "/global/assets/veloce",
     "image": "veloce.jpg",
-    "genre": "Racing"
+    "genre": "Arcade"
   },
   {
     "name": "Venge.io",
     "url": "https://venge.io/",
     "image": "venge.webp",
-    "genre": "Shooter"
+    "genre": "Action"
   },
   {
     "name": "Vex 3",
@@ -255,12 +255,12 @@
     "name": "Wordle",
     "file": "/global/assets/wordle",
     "image": "wordle.jpg",
-    "genre": "Puzzle"
+    "genre": "Casual"
   },
   {
     "name": "xx142-b2exe",
     "file": "/global/assets/xx142-b2exe",
     "image": "xx.jpg",
-    "genre": "Adventure"
+    "genre": "Casual"
   }
 ]

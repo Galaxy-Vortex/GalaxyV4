@@ -21,6 +21,7 @@ body {
 }
 .h1game {
   display: inline-block;
+  opacity: 0;
 
 }
 .settings {
