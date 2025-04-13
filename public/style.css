@@ -52,7 +52,7 @@ body {
   outline: none;
   background: none;
   color: white;
-  width: 35rem;
+  width: 38rem;
   background-image: url("global/img/search.png");
   background-size: 20px;
   background-position: 10px 15px;
@@ -104,7 +104,107 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25vh;
+  margin-top: 18vh;
+}
+.features {
+  overflow-x: hidden;
+  padding: 1rem 2rem 8rem 2rem;
+}
+
+.features-grid {
+  width: 85vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature-card {
+  opacity: 0;
+  min-width: 300px;
+  width: 20%;
+  height: auto;
+  background-color: #ffffff05;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff70;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.feature-card:hover::before {
+  top: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.feature-card h3 {
+  opacity: 0;
+  color: white;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  animation: ghostin 1s ease-out 0.7s forwards;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover h3 {
+  transform: translateX(10px);
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-family: "Outfit";
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.6;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ab {
+  padding: 12px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #ffffff12;
+  border: 1px solid #ffffff70;
+  border-radius: 7px;
+  margin-bottom: 15vh;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  transition-duration: 0.2s;
+}
+.ab:hover {
+  background-color: #ffffff25;
 }
 h1 {
   margin-top: 3rem;
@@ -168,102 +268,4 @@ h1 {
   .slogan {
     display: none;
   }
-}
-.features {
-  overflow-x: hidden;
-  padding: 1rem 2rem 8rem 2rem;
-}
-
-.features-grid {
-  width: 85vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.feature-card {
-  opacity: 0;
-  min-width: 300px;
-  width: 20%;
-  background-color: #ffffff05;
-  padding: 2rem;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  border: 1px solid #ffffff70;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-card::before {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.feature-card:hover::before {
-  top: 100%;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feature-card:hover .feature-icon {
-  transform: scale(1.1) rotate(10deg);
-}
-
-.feature-card h3 {
-  opacity: 0;
-  color: white;
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  animation: ghostin 1s ease-out 0.7s forwards;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feature-card:hover h3 {
-  transform: translateX(10px);
-  font-weight: 600;
-}
-
-.feature-card p {
-  font-family: "Outfit";
-  font-weight: 200;
-  line-height: 1.6;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.ab {
-  padding: 12px 20px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #ffffff12;
-  border: 1px solid #ffffff70;
-  border-radius: 7px;
-  margin-bottom: 15vh;
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  transition-duration: 0.2s;
-}
-.ab:hover {
-  background-color: #ffffff25;
 }

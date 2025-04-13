@@ -44,9 +44,7 @@
     </button>
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__item" onclick="window.location.href='/';">
-          Home
-        </li>
+        <li class="`" onclick="window.location.href='/';">Home</li>
         <li class="navigation__item" onclick="window.location.href='/g';">
           Games
         </li>
@@ -63,30 +61,30 @@
     </nav>
 
     <nav class="navbar">
-      <div class="navbar__item">
+      <div class="navbar__item selected">
         <a href="/" class="navbar__link"
-          ><ion-icon name="home-outline"></ion-icon
-        ></a>
+          ><ion-icon name="home-outline"></ion-icon> <span class="navlist">Home</span></a
+        >
       </div>
       <div class="navbar__item">
         <a href="/g/" class="navbar__link"
-          ><ion-icon name="game-controller-outline"></ion-icon>
+          ><ion-icon name="game-controller-outline"></ion-icon> <span class="navlist">Games</span>
         </a>
       </div>
       <div class="navbar__item">
         <a href="/a/" class="navbar__link"
           ><ion-icon name="apps-outline"></ion-icon
-        ></a>
+        > <span class="navlist">Apps</span></a>
       </div>
       <div class="navbar__item">
         <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"
-          ><ion-icon name="help-circle-outline"></ion-icon
-        ></a>
+          ><ion-icon name="help-circle-outline"> </ion-icon
+        > <span class="navlist">Help</span></a>
       </div>
       <div class="navbar__item">
         <a href="/settings/" class="navbar__link"
           ><ion-icon name="settings-outline"></ion-icon
-        ></a>
+        > <span class="navlist">Settings</span></a>
       </div>
     </nav>
 
@@ -152,7 +150,7 @@
     </section>
     <div class="ab" onclick="chemical.aboutBlank('index.html')">
       Open About:Blank
-    </div>    
+    </div>
     <section id="controls" is="chemical-controls">
       <button onclick="chemical.componentAction('back', 'web')">Back</button>
       <button onclick="chemical.componentAction('forward', 'web')">
