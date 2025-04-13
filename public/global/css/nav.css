@@ -166,7 +166,6 @@ ion-icon, .navbar__link {
   .navigation {
     visibility: visible;
   }
-
 }
 
 @media (max-width: 750px) {
@@ -176,6 +175,9 @@ ion-icon, .navbar__link {
   .hamburger,
   .navigation {
     visibility: visible;
+  }
+  body {
+    margin-left: 0px
   }
 }
 @media (min-width: 750px) {
