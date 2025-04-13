@@ -22,7 +22,7 @@
   border-radius: 5px;
   transition: 250ms ease all;
   color: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #ffffff00;
 }
 .navlist {
@@ -35,7 +35,7 @@
 .selected {
   border: 1px solid #ffffff3a;
   background-color: #fafafa17;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 ion-icon {
   padding: 8px;

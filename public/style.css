@@ -6,6 +6,8 @@ body {
   background-color: #0e100f;
   color: white;
   overflow-x: hidden;
+  margin-left: 170px;
+
 }
 .gradient-container {
   position: absolute;
@@ -99,7 +101,7 @@ body {
   user-select: none;
 }
 .centerdiv {
-  width: 100vw;
+  width: 75vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,9 +230,12 @@ h1 {
   text-align: center;
   animation: ghostin 1s ease-out 0.7s forwards;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 4rem;
+  }
+  #search {
+    width: 50%;
   }
 }
 @media (max-width: 650px) {

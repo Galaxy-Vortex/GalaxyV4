@@ -6,6 +6,7 @@ body {
   align-items: center;
   background-color: #0e100f;
   color: white;
+  margin-left: 100px;
 }
 .navbar {
   opacity: 0;
