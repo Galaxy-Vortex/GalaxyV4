@@ -10,4 +10,3 @@ document.querySelector("select").addEventListener("change", function () {
   const searchInput = document.querySelector("#search"); // Get the input element
   searchInput.setAttribute("data-service", selectedValue); // Set the data-service attribute
 });
-

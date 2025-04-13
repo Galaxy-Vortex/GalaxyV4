@@ -34,7 +34,6 @@ body {
   animation: ghostin 0.3s ease 0.5s forwards;
   transition-duration: 0.4s;
   padding: 30px;
-  width: 100%;
 }
 .settingcontainer:hover {
   background-color: #ffffff0c;

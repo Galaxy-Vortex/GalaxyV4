@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +13,8 @@
     <script src="../settings/setting.js"></script>
     <script src="/chemical.js"></script>
     <script src="/chemical.components.js"></script>
+    <script defer src="../global/js/Swup.umd.js"></script>
+    <script defer src="../global/js/swup.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -31,7 +32,6 @@
   </script>
 
   <body>
-    
     <button class="hamburger">
       <span class="hamburger__box">
         <span class="hamburger__inner"></span>
@@ -59,123 +59,141 @@
     <nav class="navbar">
       <div class="navbar__item">
         <a href="/" class="navbar__link"
-          ><ion-icon name="home-outline"></ion-icon> <span class="navlist">Home</span></a
+          ><ion-icon name="home-outline"></ion-icon>
+          <span class="navlist">Home</span></a
         >
       </div>
       <div class="navbar__item selected">
         <a href="/g/" class="navbar__link"
-          ><ion-icon name="game-controller-outline"></ion-icon> <span class="navlist">Games</span>
+          ><ion-icon name="game-controller-outline"></ion-icon>
+          <span class="navlist">Games</span>
         </a>
       </div>
       <div class="navbar__item">
         <a href="/a/" class="navbar__link"
-          ><ion-icon name="apps-outline"></ion-icon
-        > <span class="navlist">Apps</span></a>
+          ><ion-icon name="apps-outline"></ion-icon>
+          <span class="navlist">Apps</span></a
+        >
       </div>
       <div class="navbar__item">
         <a href="https://discord.gg/6wQTrrfNcr" class="navbar__link"
-          ><ion-icon name="help-circle-outline"> </ion-icon
-        > <span class="navlist">Help</span></a>
+          ><ion-icon name="help-circle-outline"> </ion-icon>
+          <span class="navlist">Help</span></a
+        >
       </div>
       <div class="navbar__item">
         <a href="/settings/" class="navbar__link"
-          ><ion-icon name="settings-outline"></ion-icon
-        > <span class="navlist">Settings</span></a>
+          ><ion-icon name="settings-outline"></ion-icon>
+          <span class="navlist">Settings</span></a
+        >
       </div>
     </nav>
-    <h1 class="title">
-      <span class="h1game h1one">G</span>
-      <span class="h1game h1two">A</span>
-      <span class="h1game h1three">M</span>
-      <span class="h1game h1four">E</span>
-      <span class="h1game h1five">S</span>
-    </h1>
-    <div class="center-div">
-      <div class="inputfield">
-        <input type="text" id="gamesearch" placeholder="Search Games or Tags" />
-        <div class="genre-filters">
-          <label>
-            <input type="checkbox" class="genre-filter" value="Action" />
-            <div class="highlight"><a>Action</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Rhythm" />
-            <div class="highlight"><a>Rhythm</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Horror" />
-            <div class="highlight"><a>Horror</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Simulation" />
-            <div class="highlight"><a>Simulation</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Tower Defense" />
-            <div class="highlight"><a>Tower Defense</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="car" />
-            <div class="highlight"><a>Racing</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Multiplayer" />
+    <main id="swup" class="transition-fade">
+      <h1 class="title">
+        <span class="h1game h1one">G</span>
+        <span class="h1game h1two">A</span>
+        <span class="h1game h1three">M</span>
+        <span class="h1game h1four">E</span>
+        <span class="h1game h1five">S</span>
+      </h1>
+      <div class="center-div">
+        <div class="inputfield">
+          <input
+            type="text"
+            id="gamesearch"
+            placeholder="Search Games or Tags"
+          />
+          <div class="genre-filters">
+            <label>
+              <input type="checkbox" class="genre-filter" value="Action" />
+              <div class="highlight"><a>Action</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="Rhythm" />
+              <div class="highlight"><a>Rhythm</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="Horror" />
+              <div class="highlight"><a>Horror</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="Simulation" />
+              <div class="highlight"><a>Simulation</a></div>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="genre-filter"
+                value="Tower Defense"
+              />
+              <div class="highlight"><a>Tower Defense</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="car" />
+              <div class="highlight"><a>Racing</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="Multiplayer" />
 
-            <div class="highlight"><a>Multiplayer</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Platformer" />
+              <div class="highlight"><a>Multiplayer</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="Platformer" />
 
-            <div class="highlight"><a>Platformer</a></div>
-          </label>
-          <label>
-            <input type="checkbox" class="genre-filter" value="Casual" />
+              <div class="highlight"><a>Platformer</a></div>
+            </label>
+            <label>
+              <input type="checkbox" class="genre-filter" value="Casual" />
 
-            <div class="highlight"><a>Casual</a></div>
-          </label>
+              <div class="highlight"><a>Casual</a></div>
+            </label>
+          </div>
         </div>
+        <div class="games"></div>
       </div>
-      <div class="games"></div>
-    </div>
-    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
-    <script src="../global/js/nav.js"></script>
-    <input
-      spellcheck="false"
-      autocomplete="off"
-      id="search"
-      data-frame="web"
-      data-auto-https
-      data-search-engine="https://www.bing.com/search?q=%s"
-      placeholder="Search or Enter a URL"
-      is="chemical-input"
-    />
-    <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
-    <button
-      style="opacity: 0"
-      data-for="search"
-      is="chemical-button"
-      id="submitbutton"
-    >
-      Go!
-    </button>
-    <section id="controls" is="chemical-controls">
-      <button onclick="chemical.componentAction('back', 'web')">Back</button>
-      <button onclick="chemical.componentAction('forward', 'web')">
-        Forward
+      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+      <script src="../global/js/nav.js"></script>
+      <input
+        spellcheck="false"
+        autocomplete="off"
+        id="search"
+        data-frame="web"
+        data-auto-https
+        data-search-engine="https://www.bing.com/search?q=%s"
+        placeholder="Search or Enter a URL"
+        is="chemical-input"
+      />
+      <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
+      <button
+        style="opacity: 0"
+        data-for="search"
+        is="chemical-button"
+        id="submitbutton"
+      >
+        Go!
       </button>
-      <button onclick="chemical.componentAction('reload', 'web')">
-        Reload
-      </button>
-      <button onclick="chemical.componentAction('close', 'web')">Close</button>
-    </section>
-    <!-- GSAP -->
-     <script src="barba.js"></script>
-    <script src="../global/js/gsap.js"></script>
-    <script src="animation.js"></script>
-    <script src="g.js"></script>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
-    ></script>
+      <section id="controls" is="chemical-controls">
+        <button onclick="chemical.componentAction('back', 'web')">Back</button>
+        <button onclick="chemical.componentAction('forward', 'web')">
+          Forward
+        </button>
+        <button onclick="chemical.componentAction('reload', 'web')">
+          Reload
+        </button>
+        <button onclick="chemical.componentAction('close', 'web')">
+          Close
+        </button>
+      </section>
+      <script src="../global/js/script.js"></script>
+      <!-- GSAP -->
+      <script src="barba.js"></script>
+      <script src="../global/js/gsap.js"></script>
+      <script src="animation.js"></script>
+      <script src="g.js"></script>
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+      ></script>
+    </main>
   </body>
 </html>
