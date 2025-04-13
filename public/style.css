@@ -1,13 +1,10 @@
-body {
+body, main {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0e100f;
   color: white;
   overflow-x: hidden;
-  margin-left: 170px;
-
 }
 .gradient-container {
   position: absolute;
@@ -61,8 +58,12 @@ body {
   background-repeat: no-repeat;
   padding: 15px 0px 15px 40px;
   margin-bottom: 10vh;
+  transition-duration: 0.5s;
 }
-
+#search:focus {
+  transform: scale(1.05);
+  border: 1px solid #ffffff;
+}
 #controls {
   position: fixed;
   top: 0;

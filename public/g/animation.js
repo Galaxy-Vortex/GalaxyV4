@@ -63,14 +63,6 @@ gsap.fromTo(
       ease: "expo.inOut",
     }
   );
-  gsap.to(
-    ".navbar",
-    {
-      opacity: 1,
-      delay: 0.5,
-      duration: 1.2
-    }
-  );
 gsap.to (
   ".games",
   {

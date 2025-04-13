@@ -10,7 +10,10 @@
   flex-direction: column;
   gap: 40px;
   padding: 40px 20px 0px 10px;
-  background-color: rgba(160, 160, 160, 0.096);
+  background-color: rgba(0, 0, 0, 0.116);
+  border: 1px solid #7a7a7a;
+  border-left: 0px;
+  backdrop-filter: blur(10px);
 }
 .navbar__link {
   position: relative;

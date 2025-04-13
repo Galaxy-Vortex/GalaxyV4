@@ -8,9 +8,6 @@ body {
   color: white;
   margin-left: 100px;
 }
-.navbar {
-  opacity: 0;
-}
 .title {
   margin-top: 5rem;
   font-family: "IBM Plex Sans", serif;

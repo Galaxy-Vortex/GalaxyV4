@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+  height: 150vh;
+}
+body {
+  background-image: url(..//bg/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @keyframes ghostin {
     from {
       opacity: 0;

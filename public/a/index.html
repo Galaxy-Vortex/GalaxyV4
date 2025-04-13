@@ -41,7 +41,7 @@
         <li class="navigation__item"onclick="window.location.href='https://discord.gg/6wQTrrfNcr';">Help</li>
       </ul>
     </nav>
-    <nav class="navbar">
+    <nav class="navbar" data-barba="wrapper">
       <div class="navbar__item">
         <a href="/" class="navbar__link"
           ><ion-icon name="home-outline"></ion-icon> <span class="navlist">Home</span></a
@@ -87,9 +87,7 @@
     </section>
     <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
     <script src="../global/js/nav.js"></script>
-
     <input
-      autofocus
       spellcheck="false"
       autocomplete="off"
       id="search"
@@ -99,6 +97,7 @@
       placeholder="Search or Enter a URL"
       is="chemical-input"
     />
+    
     <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
     <button style="opacity:0;" data-for="search" is="chemical-button" id="submitbutton">
       Go!
@@ -112,5 +111,7 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script src="../global/js/barba.js"></script>
+
   </body>
 </html>

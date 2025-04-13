@@ -9,9 +9,6 @@ body {
   margin-left: 170px;
   --width: 1440px;
 }
-.navbar {
-  opacity: 0;
-}
 section {
   background-color: #0e100f;
 }
