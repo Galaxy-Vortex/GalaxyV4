@@ -51,6 +51,10 @@ ion-icon, .navbar__link {
   text-decoration: none;
   
 }
+.version {
+  position: absolute;
+  bottom: 50px;
+}
 .hamburger {
   position: fixed;
   z-index: 10;
@@ -65,7 +69,7 @@ ion-icon, .navbar__link {
 
 .hamburger,
 .navigation {
-  visibility: hidden;
+  display: block;
   transition: transform 0.3s 0.1s ease-in-out;
 }
 
@@ -160,7 +164,7 @@ ion-icon, .navbar__link {
 }
 @media (max-height: 400px) {
   .navbar {
-    visibility: hidden;
+    display: none;
   }
   .hamburger,
   .navigation {
@@ -170,7 +174,7 @@ ion-icon, .navbar__link {
 
 @media (max-width: 750px) {
   .navbar {
-    visibility: hidden;
+    display: none;
   }
   .hamburger,
   .navigation {
@@ -186,6 +190,6 @@ ion-icon, .navbar__link {
   }
   .hamburger,
   .navigation {
-    visibility: hidden;
+    display: none;
   }
 }

@@ -109,6 +109,7 @@ body {
   margin-top: 18vh;
 }
 .features {
+  transform: scale(0.85);
   overflow-x: hidden;
   padding: 1rem 2rem 8rem 2rem;
 }
@@ -124,7 +125,7 @@ body {
 .feature-card {
   opacity: 0;
   min-width: 300px;
-  width: 20%;
+  width: 25%;
   height: auto;
   background-color: #ffffff05;
   padding: 2rem;
@@ -193,13 +194,14 @@ body {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ab {
-  padding: 12px 20px;
+  padding: 12px 30px;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   background-color: #ffffff12;
   border: 1px solid #ffffff70;
   border-radius: 7px;
+  margin-top: 10vh;
   margin-bottom: 15vh;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
