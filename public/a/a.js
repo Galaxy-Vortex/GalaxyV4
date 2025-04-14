@@ -1,7 +1,7 @@
 fetch("a.json")
   .then((response) => response.json())
   .then((games) => {
-    const appsContainer = document.querySelector(".games");
+    const appsContainer = document.querySelector(".apps");
 
     games.forEach((game, index) => {
       const gameElement = document.createElement("div");

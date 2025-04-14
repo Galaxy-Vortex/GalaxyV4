@@ -35,11 +35,12 @@
   border: 1px solid #ffffff3a;
   background-color: #fafafa17;
 }
-.selected {
+
+/*.selected {
   border: 1px solid #ffffff3a;
   background-color: #fafafa17;
   border-radius: 8px;
-}
+} */
 ion-icon {
   padding: 8px;
   color: #ffffff;

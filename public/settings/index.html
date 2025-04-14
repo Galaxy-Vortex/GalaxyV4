@@ -13,6 +13,9 @@
     <script src="/chemical.js"></script>
     <script src="/chemical.cloaking.js"></script>
     <script src="/chemical.components.js"></script>
+    <script src="/global/js/Swup.umd.js"></script>
+    <script src="/global/js/swup.js"></script>
+
    </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -86,7 +89,7 @@
         >
       </div>
     </nav>
-    <main>
+    <main id="swup" class="transition-fade">
       <h1 class="settingTitle">
         <span class="h1game settings1">S</span>
         <span class="h1game settings2">E</span>
@@ -104,8 +107,8 @@
           <button class="settingBtn" onclick="chemical.aboutBlank('index.html')">Launch</button>
         </div>
         <div class="settingcontainer">
-          <h2>Auto Cloaker</h2>
-          <h3>
+          <h2 class="settingName">Auto Cloaker</h2>
+          <h3 class="settingDesc">
             Automatically launches About:Blank, preventing the website from
             appearing in your history
           </h3>
@@ -121,48 +124,48 @@
           />
         </div>
 
-        <script>
-          // Check if localStorage has a value for autoAB, if not set it to true
-          if (localStorage.getItem("autoAB") === null) {
-            localStorage.setItem("autoAB", "false");
-          }
-
-          // Set the checkbox based on localStorage value
-          document.getElementById("autoABToggle").checked =
-            localStorage.getItem("autoAB") === "true";
-
-          // Update localStorage value when the checkbox is changed
-          document
-            .getElementById("autoABToggle")
-            .addEventListener("change", function () {
-              localStorage.setItem("autoAB", this.checked);
-              if (this.checked) {
-                location.reload();
-                checkPopupsBlocked();
-              }
-            });
-        </script>
-        <!--
-      <div class="settingcontainer">
-        <h2>Anti-Close</h2>
-        <button>Launch</button>
-      </div>
--->
-      </div>
-      <script src="/global/js/script.js"></script>
-      <script src="/global/js/nav.js"></script>
-      <!-- GSAP -->
-      <script src="/global/js/gsap.js"></script>
-      <script src="/global/js/animation.js"></script>
-      <script src="animation.js"></script>
-      <script src="setting.js"></script>
-      <script
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
-      ></script>
     </main>
   </body>
 </html>
+<script>
+  // Check if localStorage has a value for autoAB, if not set it to true
+  if (localStorage.getItem("autoAB") === null) {
+    localStorage.setItem("autoAB", "false");
+  }
+
+  // Set the checkbox based on localStorage value
+  document.getElementById("autoABToggle").checked =
+    localStorage.getItem("autoAB") === "true";
+
+  // Update localStorage value when the checkbox is changed
+  document
+    .getElementById("autoABToggle")
+    .addEventListener("change", function () {
+      localStorage.setItem("autoAB", this.checked);
+      if (this.checked) {
+        location.reload();
+        checkPopupsBlocked();
+      }
+    });
+</script>
+<!--
+<div class="settingcontainer">
+<h2>Anti-Close</h2>
+<button>Launch</button>
+</div>
+-->
+</div>
+<script src="/global/js/script.js"></script>
+<script src="/global/js/nav.js"></script>
+<!-- GSAP -->
+<script src="/global/js/gsap.js"></script>
+<script src="/global/js/animation.js"></script>
+<script src="setting.js"></script>
+<script
+type="module"
+src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+></script>
+
 <script>
   document.getElementById("autoABToggle").innerHTML =
     localStorage.getItem("autoAB") == "true" ? "Disable" : "Enable";
