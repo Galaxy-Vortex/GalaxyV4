@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 .background {
-  background-image: url(../bg/2.png);
+  background-image: url(../bg/1.png);
   background-repeat:no-repeat;
   position: fixed;
   height: 100vh;
@@ -45,7 +45,7 @@ body {
   height: 384px;
   width: 384px;
   border-radius: 50%;
-  background-color: #6ad1fa;
+  background-color: #9ddbf3;
   top: -25.5rem;
   left: 50%;
   filter: blur(150px);
@@ -74,7 +74,7 @@ body {
   background: none;
   color: white;
   width: 38rem;
-  background-image: url("global/img/search.png");
+  background-image: url("/global/img/search.png");
   background-size: 20px;
   background-position: 10px 15px;
   background-repeat: no-repeat;
@@ -138,7 +138,7 @@ body {
 }
 
 .features-grid {
-  width: 85vw;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -148,8 +148,8 @@ body {
 .feature-card {
   opacity: 0;
   min-width: 300px;
-  width: 25%;
-  height: auto;
+  width: 24%;
+  height: 250px;
   background-color: #ffffff05;
   padding: 2rem;
   border-radius: 16px;
@@ -199,7 +199,7 @@ body {
   color: white;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   animation: ghostin 1s ease-out 0.7s forwards;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -211,7 +211,7 @@ body {
 
 .feature-card p {
   font-family: "Outfit";
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 200;
   line-height: 1.6;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -316,7 +316,7 @@ body {
   outline: none;
   background: none;
   color: white;
-  background-image: url("../global/img/search.png");
+  background-image: url("/global/img/search.png");
   background-size: 20px;
   background-position: 10px 15px;
   background-repeat: no-repeat;
@@ -405,14 +405,13 @@ a:checked + .checkbox_highlight {
 }
 .cards {
   display: block;
-  opacity: 0.85;
   width: 100%;
   height: 100%;
   transition: 0.3s;
   border-radius: 10px;
 }
 .game:hover img {
-  opacity: 0.6;
+  filter: brightness(0.7);
 }
 .cardname {
   position: absolute;
@@ -733,7 +732,7 @@ button:hover {
 
 .transition-fade {
   opacity: 1;
-  transition: 50ms;
+  transition: 100ms;
 }
 html.is-animating .transition-fade {
   opacity: 0;

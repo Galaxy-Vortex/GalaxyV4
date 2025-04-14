@@ -41,13 +41,13 @@
   background-color: #fafafa17;
   border-radius: 8px;
 } */
-ion-icon {
+.navionicon {
   padding: 8px;
   color: #ffffff;
   background-color: #a0a0a021;
   border-radius: 5px;
 }
-ion-icon, .navbar__link {
+.navionicon, .navbar__link {
   font-family: "Outfit";
   font-weight: 200;
   line-height: 1.6;
