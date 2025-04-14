@@ -1,20 +1,3 @@
-try {
-  var analyticsScript = document.createElement("script");
-  analyticsScript.src =
-    "https://www.googletagmanager.com/gtag/js?id=G-PYBNSB93F8";
-  analyticsScript.async = true;
-  document.head.appendChild(analyticsScript);
-  var analyticsScript2 = document.createElement("script");
-  analyticsScript2.innerHTML = `
-window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PYBNSB93F8');
-`;
-  document.head.appendChild(analyticsScript2);
-} catch {}
-
 let inIframe;
 try {
   inIframe = window.self !== window.top;
