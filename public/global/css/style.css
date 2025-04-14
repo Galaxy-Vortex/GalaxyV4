@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   height: calc(auto + 10vh);
+  overflow-x: hidden;
 }
 main {
   margin: 0;
@@ -11,12 +12,15 @@ main {
   margin-left: 170px;
   --width: 1440px;
   z-index: 10;
+  overflow-x: hidden;
 }
 body {
   height: auto;
+  overflow-x: hidden;
 }
 .background {
   background-image: url(../bg/2.png);
+  background-repeat:no-repeat;
   position: fixed;
   height: 100vh;
   top: 0;
@@ -511,17 +515,17 @@ a:checked + .checkbox_highlight {
 
 /*GAMES / SEARCH BAR*/
 @media (max-width: 1590px) {
-  body {
+  main {
     --width: 1080px;
   }
 }
 @media (max-width: 1250px) {
-  body {
+  main {
     --width: 700px;
   }
 }
 @media (max-width: 870px) {
-  body {
+  main {
     --width: 335px;
   }
 }
@@ -565,16 +569,16 @@ a:checked + .checkbox_highlight {
   font-size: 5rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
-  margin-left: 1.25rem;
 }
 .settings {
-  width: 60%;
+  width: 70vw;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .settingcontainer {
+  width: 100%;
   opacity: 0;
   animation: ghostin 0.3s ease 0.5s forwards;
   transition-duration: 0.4s;

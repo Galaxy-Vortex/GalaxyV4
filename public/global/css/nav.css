@@ -184,7 +184,7 @@ ion-icon, .navbar__link {
   .navigation {
     visibility: visible;
   }
-  body {
+  main {
     margin-left: 0px
   }
 }
