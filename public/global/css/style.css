@@ -435,7 +435,7 @@ a:checked + .checkbox_highlight {
 
 .game:hover .cardname,
 .game:hover .cardgenre {
-  margin-left: 5px;
+  margin-left: 1vw;
   opacity: 1;
 }
 /*TITLE FONT SIZE*/
