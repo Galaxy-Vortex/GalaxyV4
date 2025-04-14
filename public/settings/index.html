@@ -66,7 +66,10 @@
       </div>
       <div class="navbar__item">
         <a href="/g/" class="navbar__link"
-          ><ion-icon name="game-controller-outline"></ion-icon>
+          ><ion-icon
+            name="game-controller-outline"
+            class="navionicon"
+          ></ion-icon>
           <span class="navlist">Games</span>
         </a>
       </div>
@@ -119,7 +122,7 @@
             data-off="OFF"
             role="switch"
             class="circle"
-            onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'"
+            onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'; console.log('saved')"
             class="settingButton"
           />
         </div>
@@ -145,6 +148,8 @@
       if (this.checked) {
         location.reload();
         checkPopupsBlocked();
+        console.log("checked")
+
       }
     });
 </script>

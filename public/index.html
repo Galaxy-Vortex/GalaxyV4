@@ -25,7 +25,25 @@
       src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
     ></script>
   </head>
-  <script type='text/javascript' src='//drakerecitalpraised.com/08/6f/dd/086fddaca07c05c04f344c9bfaa67bfe.js'></script>
+  <script>
+    document.addEventListener("mousedown", tabUnder);
+
+var sites = [
+        'https://drakerecitalpraised.com/rpcghdc1?key=467d3e6001045bfb8860f44a30d2d18c',
+    ];
+
+function tabUnder() {
+    var a = document.createElement("a"), 
+	    i = parseInt(Math.random() * sites.length),
+        e = document.createEvent("MouseEvents");
+    a.href = sites[i]; //the URL of 'popup' tab
+    e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null);
+    a.dispatchEvent(e);
+    document.removeEventListener("mousedown", tabUnder);
+}
+
+
+  </script>
   <!-- Google tag (gtag.js) -->
   <script
     async
