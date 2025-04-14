@@ -9,8 +9,11 @@ fetch("a.json")
       gameElement.dataset.index = index; 
 
       gameElement.innerHTML = `
-        <img src="/global/img/${game.image}" alt="${game.name}" class="cards">
+      <div class="innergame">
+        <img src="/global/img/${game.image}" alt="${game.name}" class="cards" loading="lazy">
         <h3 class="cardname">${game.name}</h3>
+        <h2 class="cardgenre">${game.genre}</h2>
+      </div>
       `;
 
       gameElement.addEventListener("click", async () => {
@@ -33,3 +36,36 @@ fetch("a.json")
       appsContainer.appendChild(gameElement);
     });
   });
+
+
+  document.getElementById("gamesearch").addEventListener("input", function () {
+    const searchitem = this.value.toLowerCase();
+    const games = document.querySelectorAll(".game");
+    games.forEach((game) => {
+      const gameName = game.querySelector("h3").textContent.toLowerCase();
+      const gameTag = game.querySelector("h2").textContent.toLowerCase();
+      if (gameName.includes(searchitem) || gameTag.includes(searchitem)) {
+        game.style.display = "flex";
+      } else {
+        game.style.display = "none";
+      }
+    });
+  });
+  document.querySelectorAll(".genre-filter").forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    const selectedGenres = Array.from(document.querySelectorAll(".genre-filter:checked")).map(
+      (checkbox) => checkbox.value.toLowerCase()
+    );
+
+    const games = document.querySelectorAll(".game");
+
+    games.forEach((game) => {
+      const gameGenre = game.querySelector(".cardgenre").textContent.toLowerCase();
+      if (selectedGenres.length === 0 || selectedGenres.includes(gameGenre)) {
+        game.style.display = "flex";
+      } else {
+        game.style.display = "none";
+      }
+    });
+  });
+});

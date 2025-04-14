@@ -1,20 +1,683 @@
 html {
   scroll-behavior: smooth;
-  height: 150vh;
+  height: calc(auto + 10vh);
+}
+main {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-left: 170px;
+  --width: 1440px;
+  z-index: 10;
 }
 body {
-  background-image: url(..//bg/2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: auto;
 }
-.transition-fade {
-  opacity: 1;
-    transition: 500ms;
+.background {
+  background-image: url(../bg/2.png);
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -10000;
+  filter: blur(2px);
 }
-html.is-animating .transition-fade{
+.gradient-container {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  width: 90vw;
+}
+.gradient-2,
+.gradient-3 {
+  z-index: -10;
+}
+.gradient-2 {
   opacity: 0;
-  
+  position: absolute;
+  height: 384px;
+  width: 384px;
+  border-radius: 50%;
+  background-color: #6ad1fa;
+  top: -25.5rem;
+  left: 50%;
+  filter: blur(150px);
+  animation: ghostin 1s ease-out 0.7s forwards;
 }
+.gradient-3 {
+  position: absolute;
+  height: 404px;
+  width: 404px;
+  border-radius: 50%;
+  background-color: #7a7a7b;
+  top: -15.5rem;
+  left: 20%;
+  filter: blur(200px);
+  overflow-x: hidden;
+}
+
+#search {
+  animation: ghostin 1s ease-out 0.5s forwards;
+  opacity: 0;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  outline: none;
+  background: none;
+  color: white;
+  width: 38rem;
+  background-image: url("global/img/search.png");
+  background-size: 20px;
+  background-position: 10px 15px;
+  background-repeat: no-repeat;
+  padding: 15px 0px 15px 40px;
+  margin-bottom: 10vh;
+  transition-duration: 0.5s;
+}
+#search:focus {
+  transform: scale(1.05);
+  border: 1px solid #ffffff;
+}
+#controls {
+  background-color: #0e100f;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2.5rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0 0.5rem;
+  gap: 0.5rem;
+  visibility: hidden;
+}
+
+#controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+}
+
+#web {
+  visibility: hidden;
+  position: fixed;
+  top: 2.5rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 2.5rem);
+  border: none;
+  background: #212121;
+  user-select: none;
+}
+.index_body {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18vh;
+}
+.features {
+  transform: scale(0.85);
+  overflow-x: hidden;
+  padding: 1rem 2rem 8rem 2rem;
+}
+
+.features-grid {
+  width: 85vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature-card {
+  opacity: 0;
+  min-width: 300px;
+  width: 25%;
+  height: auto;
+  background-color: #ffffff05;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff70;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.feature-card:hover::before {
+  top: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.feature-card h3 {
+  opacity: 0;
+  color: white;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  animation: ghostin 1s ease-out 0.7s forwards;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover h3 {
+  transform: translateX(10px);
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-family: "Outfit";
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.6;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ab {
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #ffffff12;
+  border: 1px solid #ffffff70;
+  border-radius: 7px;
+  margin-top: 10vh;
+  margin-bottom: 15vh;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  transition-duration: 0.2s;
+}
+.ab:hover {
+  background-color: #ffffff25;
+}
+.indexTitle {
+  margin-top: 3rem;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-left: 1.25rem;
+  margin-bottom: 0rem;
+}
+.galaxy {
+  opacity: 0;
+  letter-spacing: 20px;
+  display: inline-block;
+}
+.slogan {
+  opacity: 0;
+  color: white;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+  margin-bottom: 3em;
+  text-align: center;
+  animation: ghostin 1s ease-out 0.7s forwards;
+}
+@media (max-width: 900px) {
+  .indexTitle {
+    font-size: 4rem;
+  }
+  #search {
+    width: 50%;
+  }
+}
+@media (max-width: 650px) {
+  #search {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .indexTitle {
+    font-size: 2.5rem;
+  }
+  .slogan {
+    font-size: 1rem;
+  }
+  .gradient-3 {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .indexTitle {
+    display: block;
+    font-size: 1rem;
+  }
+  .slogan {
+    display: none;
+  }
+}
+@media (max-width: 250px) {
+  .indexTitle {
+    display: block;
+    font-size: 0.5rem;
+    letter-spacing: 0px;
+  }
+  .slogan {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GAME & APP CSS */
+.gamefilters {
+  opacity: 0;
+  animation: ghostin 1s ease-out 0.5s forwards;
+  width: var(--width);
+  display: flex;
+  flex-direction: column;
+}
+#gamesearch {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  outline: none;
+  background: none;
+  color: white;
+  background-image: url("../global/img/search.png");
+  background-size: 20px;
+  background-position: 10px 15px;
+  background-repeat: no-repeat;
+  padding: 15px 0px 15px 40px;
+  width: 297px;
+  height: 20px;
+  margin-bottom: 2rem;
+}
+.gamebody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.genre-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.genre-filter {
+  display: none;
+}
+label a,
+.game {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Outfit";
+  font-weight: 500;
+  font-size: 16px;
+}
+.checkbox_highlight {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #ffffff0c;
+  padding: 0.7rem 0.95rem;
+  border-radius: 1.25rem;
+  background-color: #ffffff1a;
+}
+.checkbox_highlight:hover {
+  background-color: #ffffff5b;
+}
+a:checked + .checkbox_highlight {
+  background-color: #ffffff;
+}
+
+.genre-filter:checked + .checkbox_highlight {
+  background-color: #ffffff; 
+  color: #000000;
+}
+
+.gameSearchinput {
+  display: none;
+}
+
+.gameTitle {
+  margin-top: 5rem;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  margin-left: 1.25rem;
+}
+.h1game {
+  opacity: 0;
+  display: inline-block;
+}
+.games {
+  opacity: 0;
+  width: var(--width);
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.game {
+  width: 335px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.cards {
+  
+  display: block;
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.game:hover img {
+  opacity: 0.6;
+}
+.cardname {
+  position: absolute;
+  opacity: 0;
+  transition-duration: 0.3s;
+  font-family: "Outfit";
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: -80px;
+}
+.cardgenre {
+  position: absolute;
+  opacity: 0;
+  transition-delay: 0.1s;
+  transition-duration: 0.3s;
+  font-family: "Outfit";
+  font-weight: 200;
+  font-size: 15px;
+  margin-top: -40px;
+}
+
+.game:hover .cardname,
+.game:hover .cardgenre {
+  margin-left: 5px;
+  opacity: 1;
+}
+/*TITLE FONT SIZE*/
+@media (max-width: 768px) {
+  .gameTitle {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 650px) {
+  #search {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .gameTitle {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 350px) {
+  .gameTitle {
+    display: block;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 250px) {
+  .gameTitle {
+    display: block;
+    font-size: 0.5rem;
+    letter-spacing: 0px;
+  }
+}
+
+/*GAMES / SEARCH BAR*/
+@media (max-width: 1590px) {
+  body {
+    --width: 1080px;
+  }
+}
+@media (max-width: 1250px) {
+  body {
+    --width: 700px;
+  }
+}
+@media (max-width: 870px) {
+  body {
+    --width: 335px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SETTING CSS */
+
+.settingTitle {
+  color: white;
+  margin-top: 5rem;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  margin-left: 1.25rem;
+}
+.settings {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.settingcontainer {
+  opacity: 0;
+  animation: ghostin 0.3s ease 0.5s forwards;
+  transition-duration: 0.4s;
+  padding: 30px;
+}
+.settingcontainer:hover {
+  background-color: #ffffff0c;
+}
+.settingName {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.settingDesc {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #b1b1b1;
+}
+.settingBtn {
+  height: 50px;
+  width: 100px;
+  z-index: 1;
+  background-color: rgb(44, 44, 44);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition-duration:  0.3s;
+}
+.circle {
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+  --c: #333;
+  appearance: none;
+  position: relative;
+  box-sizing: content-box;
+  font-size: 2.4em;
+  height: 1em;
+  aspect-ratio: 2;
+  border: max(1px, 0.025em) solid var(--c);
+  border-radius: 1em;
+  background:
+    linear-gradient(#0003, #0000) 85% 50% / 23% 10%,
+    linear-gradient(#777 0 0) 85% 50% / 23% 10%,
+    linear-gradient(#0002 0 0),
+    var(--c)
+    ;
+  background-repeat: no-repeat;
+  box-shadow: 
+    0.05em 0.05em 0.1em #0002,
+    inset 0 0 0.05em -0.025em #fff5, 
+    inset 0 0 0.2em #0002;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(circle at 50% 50%, var(--c) calc(0.17em - 1px), #0000 0.17em),
+      radial-gradient(circle at 53% 53%, var(--c) 0.1em, #0000 0.18em),
+      #eee;
+    box-shadow: 
+      inset 0 0 0.04em #0003,
+      inset 0.015em 0.015em 0.05em #0004
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    height: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #0000;
+    top: 50%;
+    left: 0.5em;
+    transform: translate(-50%, -50%);
+    transition: left 0.3s;
+    background: 
+      radial-gradient(at 30% 30%, #ffffff08, #0002)
+      var(--c);
+    box-shadow: 
+      max(1px, 0.05em) max(1px, 0.05em) 0.05em #0002,
+      inset 0 0 max(1px, 0.05em) -0.04em #fff;
+  }
+  
+  &:checked {
+    &::after {
+      left: calc(100% - 0.5em);
+    }
+  }
+  
+  &[disabled] {
+    opacity: 0.25;
+  }
+}
+.circle:hover, button:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.158);
+}
+
+@media (max-width: 768px) {
+  .settingTitle {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  .settingTitle {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 350px) {
+  .settingTitle {
+    display: block;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 250px) {
+  .settingTitle {
+    display: block;
+    font-size: 0.5rem;
+    letter-spacing: 0px;
+  }
+}
+
 @keyframes ghostin {
     from {
       opacity: 0;

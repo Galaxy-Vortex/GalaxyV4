@@ -1,5 +1,5 @@
 gsap.fromTo(
-  ".h1one",
+  ".game1",
   {
     opacity: 0,
     x: -40,
@@ -12,7 +12,7 @@ gsap.fromTo(
   }
 );
 gsap.fromTo(
-    ".h1two",
+    ".game2",
     {
       opacity: 0,
       y: -20,
@@ -25,7 +25,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1three",
+    ".game3",
     {
       opacity: 0,
       y: 30,
@@ -38,7 +38,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1four",
+    ".game4",
     {
       opacity: 0,
       y: -50,
@@ -51,7 +51,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1five",
+    ".game5",
     {
       opacity: 0,
       x: 30,

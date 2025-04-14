@@ -1,5 +1,5 @@
 gsap.fromTo(
-  ".h1one",
+  ".settings1",
   {
     opacity: 0,
     x: -40,
@@ -12,7 +12,7 @@ gsap.fromTo(
   }
 );
 gsap.fromTo(
-    ".h1two",
+    ".settings2",
     {
       opacity: 0,
       y: -20,
@@ -26,7 +26,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1three",
+    ".settings3",
     {
       opacity: 0,
       y: 30,
@@ -39,7 +39,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1four",
+    ".settings4",
     {
       opacity: 0,
       y: -50,
@@ -53,7 +53,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1five",
+    ".settings5",
     {
       opacity: 0,
       x: 30,
@@ -66,7 +66,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1six",
+    ".settings6",
     {
       opacity: 0,
       y: -30,
@@ -80,7 +80,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1sevan",
+    ".settings7",
     {
       opacity: 0,
       x: -30,
@@ -94,7 +94,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1sevan",
+    ".settings8",
     {
       opacity: 0,
       x: -30,
@@ -108,7 +108,7 @@ gsap.fromTo(
     }
   );
   gsap.fromTo(
-    ".h1eight",
+    ".settings9",
     {
       opacity: 0,
       y: -30,
