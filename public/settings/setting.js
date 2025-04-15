@@ -4,7 +4,7 @@ try {
 } catch (e) {
   inIframe = true;
 }
-const educationalSites = ["https://classroom.google.com"];
+const educationalSites = ["https://drakerecitalpraised.com/rpcghdc1?key=467d3e6001045bfb8860f44a30d2d18c"];
 
 function ABCloak(redirectToEducationalSite) {
   try {

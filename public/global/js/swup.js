@@ -1,9 +1,14 @@
 const swup = new Swup();
 function initsettingjs() {
   // Check if the autoABToggle element exists
-  const autoABToggle = document.getElementById("autoABToggle");
+  let autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
     console.warn("autoABToggle element not found. Stopping script.");
+    return; // Exit the script
+  }
+  let tabinput = document.getElementById("tabname");
+  if (!tabinput) {
+    console.warn("Tab Input element not found. Stopping script.");
     return; // Exit the script
   }
 
@@ -24,6 +29,22 @@ function initsettingjs() {
       console.log("AB Updated!");
     }
   });
+
+  document
+  .getElementById("tabname")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      let tabInputValue = tabinput.value;
+      if (tabinput.value === "") {
+        console.log("nothing here");
+        chemical.setStore("title", "GalaxyV4");
+      } else {
+        console.log(tabInputValue);
+        chemical.setStore("title", tabInputValue);
+      }
+    }
+  });
+
   let inIframe;
   try {
     inIframe = window.self !== window.top;
@@ -99,6 +120,7 @@ function initsettingjs() {
       ABCloak(true);
     }
   }
+  
 }
 function initGsapAnimations() {
   //gsap stuff

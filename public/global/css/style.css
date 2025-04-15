@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  height: calc(auto + 10vh);
   overflow-x: hidden;
 }
 main {
@@ -308,7 +307,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#gamesearch {
+#gamesearch, .gamesearch {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -571,7 +570,7 @@ a:checked + .checkbox_highlight {
 }
 .settings {
   width: 70vw;
-  height: auto;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -732,7 +731,7 @@ button:hover {
 
 .transition-fade {
   opacity: 1;
-  transition: 100ms;
+  transition: 200ms;
 }
 html.is-animating .transition-fade {
   opacity: 0;
