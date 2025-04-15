@@ -356,6 +356,7 @@ label a,
   padding: 0.7rem 0.95rem;
   border-radius: 1.25rem;
   background-color: #ffffff1a;
+  transition-duration: 0.5s;
 }
 .checkbox_highlight:hover {
   background-color: #ffffff5b;
@@ -584,6 +585,7 @@ a:checked + .checkbox_highlight {
 }
 .settingcontainer:hover {
   background-color: #ffffff0c;
+  backdrop-filter: blur(10px);
 }
 .settingName {
   font-family: "Open Sans";
