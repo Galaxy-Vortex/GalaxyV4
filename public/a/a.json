@@ -36,11 +36,25 @@
     "genre": "Gaming"
   },
   {
+    "name": "Demonin's Item Shop",
+    "url": "https://demonin.com/games/",
+    "image": "demonin.jpg",
+    "genre": "Gaming"
+  },
+
+  {
     "name": "Discord",
     "url": "https://discord.com/app",
     "image": "Discord.webp",
     "genre": "Social Media"
   },
+  {
+    "name": "Galaxy.Click",
+    "url": "https://galaxy.click/",
+    "image": "galaxyclick.png",
+    "genre": "Gaming"
+  },
+
   {
     "name": "GeForce Now",
     "url": "https://play.geforcenow.com/mall/#/loginwall",
