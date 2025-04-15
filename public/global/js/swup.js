@@ -44,6 +44,7 @@ function initsettingjs() {
         console.log(tabInputValue);
         if (tabInputValue === "") {
           console.log("nothing here");
+          localStorage.setItem('tabinput', "GalaxyV4");
           chemical.setStore("title", "GalaxyV4");
         } else {
           console.log(tabInputValue);
@@ -615,7 +616,7 @@ function initGsapAnimations() {
 swup.hooks.on("page:view", () => {
   let tabInputValue = localStorage.getItem('tabinput');
   console.log(tabInputValue)
-  document.title = tabInputValue; // Changes the tab's title
+  document.title = tabInputValue; 
   initsettingjs()
   initGsapAnimations();
   const ionicons = document.querySelectorAll("ion-icon");
