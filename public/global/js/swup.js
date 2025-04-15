@@ -1,13 +1,18 @@
 const swup = new Swup();
 function initsettingjs() {
   // Check if the autoABToggle element exists
-  let autoABToggle = document.getElementById("autoABToggle");
+  const autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
     console.warn("autoABToggle element not found. Stopping script.");
     return; // Exit the script
   }
-  let tabinput = document.getElementById("tabname");
+  const tabinput = document.getElementById("tabname");
   if (!tabinput) {
+    console.warn("Tab Input element not found. Stopping script.");
+    return; // Exit the script
+  }
+  const faviconinput = document.getElementById("favicon");
+  if (!faviconinput) {
     console.warn("Tab Input element not found. Stopping script.");
     return; // Exit the script
   }
@@ -31,16 +36,33 @@ function initsettingjs() {
   });
 
   document
-  .getElementById("tabname")
+    .getElementById("tabname")
+    .addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        localStorage.setItem('tabinput', tabinput.value);
+        let tabInputValue = localStorage.getItem('tabinput');
+        console.log(tabInputValue);
+        if (tabInputValue === "") {
+          console.log("nothing here");
+          chemical.setStore("title", "GalaxyV4");
+        } else {
+          console.log(tabInputValue);
+          chemical.setStore("title", tabInputValue);
+        }
+      }
+    });
+
+  document
+  .getElementById("favicon")
   .addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      let tabInputValue = tabinput.value;
-      if (tabinput.value === "") {
+      let faviconinputvalue = faviconinput.value;
+      if (faviconinputvalue === "") {
         console.log("nothing here");
-        chemical.setStore("title", "GalaxyV4");
+        chemical.setStore("icon", '/global/img/favicon.png')
       } else {
-        console.log(tabInputValue);
-        chemical.setStore("title", tabInputValue);
+        console.log(faviconinputvalue);
+        chemical.setStore("icon", faviconinputvalue)
       }
     }
   });
@@ -591,6 +613,9 @@ function initGsapAnimations() {
 }
 
 swup.hooks.on("page:view", () => {
+  let tabInputValue = localStorage.getItem('tabinput');
+  console.log(tabInputValue)
+  document.title = tabInputValue; // Changes the tab's title
   initsettingjs()
   initGsapAnimations();
   const ionicons = document.querySelectorAll("ion-icon");

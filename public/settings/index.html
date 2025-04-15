@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Surf the Galaxy with no limits..." />
     <title is="chemical-title" data-title-store>GalaxyV4</title>
+    <link rel="icon" is="chemical-icon" data-icon-store href="/global/img/favicon.png">
     <link rel="preload" href="" />
     <link rel="stylesheet" href="/global/css/style.css" />
     <link rel="stylesheet" href="/global/css/fonts.css" />
     <link rel="stylesheet" href="/global/css/nav.css" />
     <script src="/chemical.js"></script>
-    <script src="/chemical.cloaking.js"></script>
-    <script src="/chemical.components.js"></script>
+    <script src="/chemical.cloaking.js" ></script>
+    <script src="/chemical.components.js" ></script>
     <script src="/global/js/Swup.umd.js" defer></script>
     <script src="/global/js/swup.js" defer></script>
   </head>
@@ -128,11 +129,22 @@
         </div>
         <div class="settingcontainer">
           <h2 class="settingName">Title</h2>
-          <h3 class="settingDesc">Change tab name. Set name as empty to reset</h3>
+          <h3 class="settingDesc">Change tab name. Set name as empty to reset <span style="color: #e43333">*Does not work in about:blank</span></h3>
           <input
             class="gamesearch"
             id="tabname"
             style="width: 150px !important"
+            placeholder="Enter new tab name"
+          />
+        </div>
+        <div class="settingcontainer">
+          <h2 class="settingName">Favicon</h2>
+          <h3 class="settingDesc">Change tab icon. Set as empty to reset <span style="color: #e43333">*Does not work in about:blank</span></h3>
+          <input
+            class="gamesearch"
+            id="favicon"
+            style="width: 250px !important"
+            placeholder="Enter img URL"
           />
         </div>
       </div>
@@ -165,7 +177,7 @@
       if (event.key === "Enter") {
         let tabinput = document.getElementById("tabname");
         let tabInputValue = tabinput.value;
-        if (tabinput.value === "") {
+        if (tabInputValue === "") {
           console.log("nothing here");
           chemical.setStore("title", "GalaxyV4");
         } else {
@@ -174,6 +186,22 @@
         }
       }
     });
+    document
+    .getElementById("favicon")
+    .addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        let faviconinput = document.getElementById("favicon");
+        let faviconinputvalue = faviconinput.value;
+        if (faviconinputvalue === "") {
+          console.log("nothing here");
+          chemical.setStore("icon", '/global/img/favicon.png')
+        } else {
+          console.log(faviconinputvalue);
+          chemical.setStore("icon", faviconinputvalue)
+        }
+      }
+    });
+
 </script>
 <script src="/global/js/script.js"></script>
 <script src="/global/js/nav.js"></script>
