@@ -6,16 +6,40 @@
     "genre": "Action"
   },
   {
+    "name": "10 Minutes Till dawn",
+    "file": "/global/assets/10-minutes-till-dawn",
+    "image": "10mtd.png",
+    "genre": "Action"
+  },
+  {
+    "name": "A Dark Room",
+    "file": "/global/assets/adarkroom",
+    "image": "adr.jpg",
+    "genre": "Adventure"
+  },
+  {
     "name": "ADOFAI",
     "url": "https://w8.snokido.com/games/unity-webgl/dance-fire-and-ice/index.html",
     "image": "adfi.png",
     "genre": "Rhythm"
   },
   {
+    "name": "Amazing Rope Police",
+    "file": "/global/assets/arp",
+    "image": "arp.jpg",
+    "genre": "Action"
+  },
+  {
     "name": "Baldi's Basics",
     "url": "https://en.gameslol.net/data/baldis-basics/index.html",
     "image": "baldi.jpg",
     "genre": "Horror"
+  },
+  {
+    "name": "Basketball Bros",
+    "file": "/global/assets/basketbros",
+    "image": "basketballbros.jpg",
+    "genre": "Multiplayer"
   },
   {
     "name": "BitLife",
@@ -42,6 +66,12 @@
     "genre": "Casual"
   },
   {
+    "name": "Deathrun 3D",
+    "file": "/global/assets/deathrun",
+    "image": "deathrun.jpg",
+    "genre": "Arcade"
+  },
+  {
     "name": "Demonin's Item Shop",
     "url": "https://demonin.com/games/",
     "image": "demonin.jpg",
@@ -52,6 +82,12 @@
     "url": "https://htmlxm.github.io/h/drift-hunters/",
     "image": "drift.jpg",
     "genre": "Car"
+  },
+  {
+    "name": "Drive Mad",
+    "file": "/global/assets/drive-mad",
+    "image": "drivemad.jpg",
+    "genre": "Racing"
   },
   {
     "name": "eagtek(Minecraft)",
@@ -78,6 +114,12 @@
     "genre": "Arcade"
   },
   {
+    "name": "HexGL",
+    "file": "/global/assets/HexGL",
+    "image": "hexgl.png",
+    "genre": "Racing"
+  },
+  {
     "name": "Hole.io",
     "url": "https://holeio.me/g/41",
     "image": "hole.jpeg",
@@ -90,14 +132,26 @@
     "genre": "Car"
   },
   {
+    "name": "Monkey Mart",
+    "file": "/global/assets/MonkeyMart",
+    "image": "monkeymart.jpg",
+    "genre": "Casual"
+  },
+  {
     "name": "Moto X3M",
     "url": "https://moto-x3m.net/main.html",
     "image": "moto.jpg",
     "genre": "Car"
   },
   {
+    "name": "ovo",
+    "file": "/global/assets/ovo",
+    "image": "ovo.jpg",
+    "genre": "Platformer"
+  },
+  {
     "name": "Paper.io",
-    "url": "https://paper-io.com/",
+    "url": "https://games.crazygames.com/en_US/paper-io-2/index.html?skipPrerollFirstSessionExp25=&v=1.329",
     "image": "paperio.jpg",
     "genre": "Multiplayer"
   },
@@ -112,6 +166,12 @@
     "url": "https://resent4-0.vercel.app/",
     "image": "resent.png",
     "genre": "Multiplayer"
+  },
+  {
+    "name": "Retro Bowl",
+    "file": "/global/assets/retro-bowl",
+    "image": "retro.webp",
+    "genre": "Simulation"
   },
   {
     "name": "Slice Master",
@@ -130,6 +190,12 @@
     "file": "/global/assets/slow-roads",
     "image": "slowroads.jpg",
     "genre": "Car"
+  },
+  {
+    "name": "Smashkarts",
+    "file": "/global/assets/smashkarts",
+    "image": "smash.jpg",
+    "genre": "Multiplayer"
   },
   {
     "name": "Space Waves",
