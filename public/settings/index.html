@@ -3,25 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Galaxy">
-    <meta property="og:description" content="Surf the Galaxy with no limits...">
-    <meta property="og:image" content="/global/img/preview.png">    
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta property="og:title" content="Galaxy" />
+    <meta
+      property="og:description"
+      content="Surf the Galaxy with no limits..."
+    />
+    <meta property="og:image" content="/global/img/preview.png" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title is="chemical-title" data-title-store>GalaxyV4</title>
-    <link rel="icon" is="chemical-icon" data-icon-store href="/global/img/favicon.png">
+    <link
+      rel="icon"
+      is="chemical-icon"
+      data-icon-store
+      href="/global/img/favicon.png"
+    />
     <link rel="preload" href="" />
     <link rel="stylesheet" href="/global/css/style.css?=v1" />
     <link rel="stylesheet" href="/global/css/fonts.css" />
     <link rel="stylesheet" href="/global/css/nav.css" />
     <script src="/chemical.js"></script>
-    <script src="/chemical.cloaking.js" ></script>
-    <script src="/chemical.components.js" ></script>
+    <script src="/chemical.cloaking.js"></script>
+    <script src="/chemical.components.js"></script>
     <script src="/global/js/Swup.umd.js" defer></script>
     <script src="/global/js/swup.js" defer></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1837646453157250"
-     crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1837646453157250"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -136,7 +150,10 @@
         </div>
         <div class="settingcontainer">
           <h2 class="settingName">Title</h2>
-          <h3 class="settingDesc">Change tab name. Set name as empty to reset <span style="color: #e43333">*Does not work in about:blank</span></h3>
+          <h3 class="settingDesc">
+            Change tab name. Set name as empty to reset
+            <span style="color: #e43333">*Does not work in about:blank</span>
+          </h3>
           <input
             class="gamesearch"
             id="tabname"
@@ -146,7 +163,10 @@
         </div>
         <div class="settingcontainer">
           <h2 class="settingName">Favicon</h2>
-          <h3 class="settingDesc">Change tab icon. Set as empty to reset <span style="color: #e43333">*Does not work in about:blank</span></h3>
+          <h3 class="settingDesc">
+            Change tab icon. Set as empty to reset
+            <span style="color: #e43333">*Does not work in about:blank</span>
+          </h3>
           <input
             class="gamesearch"
             id="favicon"
@@ -154,7 +174,6 @@
             placeholder="Enter img URL"
           />
         </div>
-
       </div>
     </main>
   </body>
@@ -192,24 +211,26 @@
           console.log(tabInputValue);
           chemical.setStore("title", tabInputValue);
         }
+        location.reload();
       }
     });
-    document
+  document
     .getElementById("favicon")
     .addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
+        
         let faviconinput = document.getElementById("favicon");
         let faviconinputvalue = faviconinput.value;
         if (faviconinputvalue === "") {
           console.log("nothing here");
-          chemical.setStore("icon", '/global/img/favicon.png')
+          chemical.setStore("icon", "/global/img/favicon.png");
         } else {
           console.log(faviconinputvalue);
-          chemical.setStore("icon", faviconinputvalue)
+          chemical.setStore("icon", faviconinputvalue);
         }
+        location.reload();
       }
     });
-
 </script>
 <script src="/global/js/script.js"></script>
 <script src="/global/js/nav.js"></script>
@@ -224,15 +245,13 @@
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="/global/js/jquery.easeScroll.js"></script>
 <script>
-  $("html").easeScroll(
-    {
-      frameRate: 100,
-      animationTime: 2000,
-      stepSize: 100,
-      keyboardSupport:true,
-      arrowScroll: 50,
-      touchpadSupport:true,
-      fixedBackground:true
-    }
-  );
-  </script>      
+  $("html").easeScroll({
+    frameRate: 100,
+    animationTime: 2000,
+    stepSize: 100,
+    keyboardSupport: true,
+    arrowScroll: 50,
+    touchpadSupport: true,
+    fixedBackground: true,
+  });
+</script>

@@ -43,13 +43,15 @@ function initsettingjs() {
         let tabInputValue = localStorage.getItem('tabinput');
         console.log(tabInputValue);
         if (tabInputValue === "") {
+          localStorage.removeItem('tabinput');
           console.log("nothing here");
-          localStorage.setItem('tabinput', "GalaxyV4");
           chemical.setStore("title", "GalaxyV4");
+          localStorage.setItem('tabinput', "GalaxyV4");
         } else {
           console.log(tabInputValue);
           chemical.setStore("title", tabInputValue);
         }
+        location.reload();
       }
     });
 
@@ -65,6 +67,7 @@ function initsettingjs() {
         console.log(faviconinputvalue);
         chemical.setStore("icon", faviconinputvalue)
       }
+      location.reload();
     }
   });
 
