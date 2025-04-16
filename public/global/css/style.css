@@ -1,13 +1,24 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  /* THEMES */
+  --background-color: #0e100f;
+  --h1: rgb(255, 255, 255);
+  --h2: rgb(255, 255, 255);
+  --gradient2: #9ddbf3;
+  --gradient3: #7a7a7b;
+  --input-border: rgb(255, 255, 255, 0.2);
+  --input-border-focus: #ffffff;
+  --circle-border: #333;
+  --button-background: rgba(255, 255, 255, 0.2);
+  --button-background-light: #ffffff25;
 }
 main {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: var(--h1);
   margin-left: 170px;
   --width: 1440px;
   z-index: 10;
@@ -44,7 +55,7 @@ body {
   height: 384px;
   width: 384px;
   border-radius: 50%;
-  background-color: #9ddbf3;
+  background-color: var(--gradient2);
   top: -25.5rem;
   left: 50%;
   filter: blur(150px);
@@ -55,7 +66,7 @@ body {
   height: 404px;
   width: 404px;
   border-radius: 50%;
-  background-color: #7a7a7b;
+  background-color: var(--gradient3);
   top: -15.5rem;
   left: 20%;
   filter: blur(200px);
@@ -66,12 +77,11 @@ body {
   opacity: 0;
   animation: ghostin 1s ease-out 0.5s forwards;
   font-size: 14px;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255, 0.2);
+  border: 1px solid var(--input-border);
   outline: none;
   background: none;
-  color: white;
+  color: var(--h1);
   width: 38rem;
   background-image: url("/global/img/search.png");
   background-size: 20px;
@@ -83,10 +93,10 @@ body {
 }
 #search:focus {
   transform: scale(1.05);
-  border: 1px solid #ffffff;
+  border: 1px solid var(--input-border-focus);
 }
 #controls {
-  background-color: #0e100f;
+  background-color: var(--background-color);
   position: fixed;
   top: 0;
   right: 0;
@@ -100,7 +110,7 @@ body {
 }
 
 #controls button {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--button-background);
   border: none;
   color: inherit;
   cursor: pointer;
@@ -149,11 +159,11 @@ body {
   min-width: 300px;
   width: 24%;
   height: 250px;
-  background-color: #ffffff05;
+  background-color: #4d4d4d04;
   padding: 2rem;
   border-radius: 16px;
-  backdrop-filter: blur(10px);
-  border: 1px solid #ffffff70;
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--input-border);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -195,7 +205,7 @@ body {
 
 .feature-card h3 {
   opacity: 0;
-  color: white;
+  color: var(--h1);
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   font-size: 1.7rem;
@@ -209,6 +219,7 @@ body {
 }
 
 .feature-card p {
+  color: var(--h2);
   font-family: "Outfit";
   font-size: 1.05rem;
   font-weight: 200;
@@ -221,7 +232,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   background-color: #ffffff12;
-  border: 1px solid #ffffff70;
+  border: 1px solid var(--input-border);
   border-radius: 7px;
   margin-top: 10vh;
   margin-bottom: 15vh;
@@ -230,7 +241,7 @@ body {
   transition-duration: 0.2s;
 }
 .ab:hover {
-  background-color: #ffffff25;
+  background-color: var(--button-background-light);
 }
 .indexTitle {
   margin-top: 3rem;
@@ -247,7 +258,7 @@ body {
 }
 .slogan {
   opacity: 0;
-  color: white;
+  color: var(--h2);
   font-family: "IBM Plex Sans", serif;
   font-weight: 300;
   margin-bottom: 3em;
@@ -309,20 +320,31 @@ body {
 }
 #gamesearch, .gamesearch {
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255, 0.2);
+  border: 1px solid var(--input-border);
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
   outline: none;
   background: none;
-  color: white;
-  background-image: url("/global/img/search.png");
+  color: var(--h1);
   background-size: 20px;
   background-position: 10px 15px;
   background-repeat: no-repeat;
-  padding: 15px 0px 15px 40px;
-  width: 297px;
   height: 20px;
   margin-bottom: 2rem;
+  transition-duration: 0.3s;
+  padding: 15px 0px 15px 0px;
+}
+#gamesearch {
+  border-bottom: 0px solid rgb(255, 255, 255, 0.2);
+  width: 0px;
+  background-image: url("/global/img/search.png");
+  padding: 15px 0px 15px 40px;
+
+}
+#gamesearch:focus {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 297px;
 }
 .gamebody {
   display: flex;
@@ -361,13 +383,9 @@ label a,
 .checkbox_highlight:hover {
   background-color: #ffffff5b;
 }
-a:checked + .checkbox_highlight {
-  background-color: #ffffff;
-}
-
 .genre-filter:checked + .checkbox_highlight {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--h1);
+  color: var(--background-color);
 }
 
 .gameSearchinput {
@@ -559,9 +577,14 @@ a:checked + .checkbox_highlight {
 
 
 /* SETTING CSS */
-
+#tabname, #favicon {
+  border-bottom: 2px solid var(--input-border);
+}
+#tabname:focus, #favicon:focus {
+  border-bottom: 1px solid var(--input-border-focus);
+}
 .settingTitle {
-  color: white;
+  color: var(--h1);
   margin-top: 5rem;
   font-family: "IBM Plex Sans", serif;
   font-weight: 300;
@@ -602,9 +625,9 @@ a:checked + .checkbox_highlight {
   height: 50px;
   width: 100px;
   z-index: 1;
-  background-color: rgb(44, 44, 44);
+  background-color: var(--button-background);
   border: none;
-  color: white;
+  color: var(--h2);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -616,18 +639,17 @@ a:checked + .checkbox_highlight {
 .circle {
   cursor: pointer;
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
-  --c: #333;
   appearance: none;
   position: relative;
   box-sizing: content-box;
   font-size: 2.4em;
   height: 1em;
   aspect-ratio: 2;
-  border: max(1px, 0.025em) solid var(--c);
+  border: max(1px, 0.025em) solid var(--circle-border);
   border-radius: 1em;
   background: linear-gradient(#0003, #0000) 85% 50% / 23% 10%,
     linear-gradient(#777 0 0) 85% 50% / 23% 10%, linear-gradient(#0002 0 0),
-    var(--c);
+    var(--circle-border);
   background-repeat: no-repeat;
   box-shadow: 0.05em 0.05em 0.1em #0002, inset 0 0 0.05em -0.025em #fff5,
     inset 0 0 0.2em #0002;
@@ -643,10 +665,10 @@ a:checked + .checkbox_highlight {
     border-radius: 50%;
     background: radial-gradient(
         circle at 50% 50%,
-        var(--c) calc(0.17em - 1px),
+        var(--circle-border) calc(0.17em - 1px),
         #0000 0.17em
       ),
-      radial-gradient(circle at 53% 53%, var(--c) 0.1em, #0000 0.18em), #eee;
+      radial-gradient(circle at 53% 53%, var(--circle-border) 0.1em, #0000 0.18em), #eee;
     box-shadow: inset 0 0 0.04em #0003, inset 0.015em 0.015em 0.05em #0004;
   }
 
@@ -661,7 +683,7 @@ a:checked + .checkbox_highlight {
     left: 0.5em;
     transform: translate(-50%, -50%);
     transition: left 0.3s;
-    background: radial-gradient(at 30% 30%, #ffffff08, #0002) var(--c);
+    background: radial-gradient(at 30% 30%, #ffffff08, #0002) var(--circle-border);
     box-shadow: max(1px, 0.05em) max(1px, 0.05em) 0.05em #0002,
       inset 0 0 max(1px, 0.05em) -0.04em #fff;
   }
@@ -678,7 +700,7 @@ a:checked + .checkbox_highlight {
 }
 .circle:hover,
 button:hover {
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.158);
+  box-shadow: 0 0 30px var( --input-border);
 }
 
 @media (max-width: 768px) {
