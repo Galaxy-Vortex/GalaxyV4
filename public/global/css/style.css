@@ -597,7 +597,7 @@ label a,
 }
 .settings {
   width: 70vw;
-  height: 150vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -705,7 +705,16 @@ label a,
 button:hover {
   box-shadow: 0 0 30px var( --input-border);
 }
-
+.pp {
+  color: var(--h1);
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 20px;
+}
+footer {
+  margin-bottom: 20vh;
+}
 @media (max-width: 768px) {
   .settingTitle {
     font-size: 4rem;
@@ -751,6 +760,35 @@ button:hover {
 
 
 
+/* PRIVACY POLICY */
+.container {
+  opacity: 0;
+  animation: ghostin 1s ease-out 0.5s forwards;
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 8px;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 300;
+}
+.contaienr h1, .container h2 {
+  color: var(--h1);
+  font-family: "Open Sans";
+  font-weight: 500;
+
+}
+.container ul {
+  list-style-type: none;
+  padding: 0;
+}
+.container li {
+  margin-bottom: 10px;
+}
+.container p {
+  margin-bottom: 15px;
+}
 
 
 
