@@ -1,5 +1,6 @@
 const swup = new Swup();
 function initsettingjs() {
+  $("html").easeScroll();
   // Check if the autoABToggle element exists
   const autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
@@ -623,4 +624,5 @@ swup.hooks.on("page:view", () => {
   ionicons.forEach((icon) => {
     console.log("Ionicon reinitialized:", icon);
   });
+  
 });
