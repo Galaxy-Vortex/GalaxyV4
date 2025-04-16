@@ -14,7 +14,7 @@
   {
     "name": "A Dark Room",
     "file": "/global/assets/adarkroom",
-    "image": "adr.jpg",
+    "image": "adr.webp",
     "genre": "Adventure"
   },
   {
@@ -98,13 +98,7 @@
   {
     "name": "ev.io",
     "url": "https://ev.io/",
-    "image": "ev.jpg",
-    "genre": "Action"
-  },
-  {
-    "name": "Fite.lol",
-    "url": "https://fite.lol/",
-    "image": "fite.webp",
+    "image": "ev.png",
     "genre": "Action"
   },
   {
