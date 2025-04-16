@@ -10,8 +10,8 @@ html {
   --input-border: rgb(255, 255, 255, 0.2);
   --input-border-focus: #ffffff;
   --circle-border: #333;
-  --button-background: rgba(255, 255, 255, 0.2);
-  --button-background-light: #ffffff25;
+  --button-background: rgb(49, 49, 49);
+  --button-background-light: #bdbdbdc9;
 }
 main {
   margin: 0;
@@ -334,17 +334,15 @@ body {
   margin-bottom: 2rem;
   transition-duration: 0.3s;
   padding: 15px 0px 15px 0px;
+  width: 297px;
 }
 #gamesearch {
   border-bottom: 0px solid rgb(255, 255, 255, 0.2);
-  width: 0px;
   background-image: url("/global/img/search.png");
   padding: 15px 0px 15px 40px;
-
 }
 #gamesearch:focus {
   border-bottom: 1px solid rgb(255, 255, 255);
-  width: 297px;
 }
 .gamebody {
   display: flex;
@@ -421,6 +419,9 @@ label a,
   display: flex;
   flex-direction: column;
 }
+.game img {
+  filter: brightness(0.8);
+}
 .cards {
   display: block;
   width: 100%;
@@ -429,7 +430,7 @@ label a,
   border-radius: 10px;
 }
 .game:hover img {
-  filter: brightness(0.7);
+  filter: brightness(0.4);
 }
 .cardname {
   position: absolute;
@@ -577,6 +578,9 @@ label a,
 
 
 /* SETTING CSS */
+#tabname::placeholder, #favicon::placeholder{
+  color: var(--button-background-light)
+}
 #tabname, #favicon {
   border-bottom: 2px solid var(--input-border);
 }
