@@ -1,6 +1,5 @@
 const swup = new Swup();
 function initsettingjs() {
-  $("html").easeScroll();
   // Check if the autoABToggle element exists
   const autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
