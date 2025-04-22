@@ -617,6 +617,7 @@ function initGsapAnimations() {
 }
 
 swup.hooks.on("page:view", () => {
+  localStorage.setItem('tabinput', "GalaxyV4");
   let tabInputValue = localStorage.getItem('tabinput');
   console.log(tabInputValue)
   document.title = tabInputValue; 

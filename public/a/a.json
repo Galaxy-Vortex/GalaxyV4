@@ -12,6 +12,19 @@
     "genre": "Streaming"
   },
   {
+    "name": "AniWatch",
+    "url": "https://ww2.aniwatch.fit/",
+    "image": "aniwatch.jpg",
+    "genre": "Streaming"
+  },
+  {
+    "name": "AniWave",
+    "url": "https://aniwave.best/home",
+    "image": "aniwave.jpg",
+    "genre": "Streaming"
+  },
+
+  {
     "name": "AutoEmbed",
     "url": "https://watch.autoembed.cc/",
     "image": "404.png",

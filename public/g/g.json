@@ -138,6 +138,12 @@
     "genre": "Car"
   },
   {
+    "name": "osu!",
+    "url": "https://webosu.online/",
+    "image": "osu.jpg",
+    "genre": "Rhythm"
+  },
+  {
     "name": "ovo",
     "file": "/global/assets/ovo",
     "image": "ovo.jpg",
