@@ -1,3 +1,5 @@
+/* All styles are stored in one css file because swup.js won't update the header when the page transitions */ 
+
 html {
   overflow-x: hidden;
   /* THEMES */
@@ -24,7 +26,6 @@ main {
   overflow-x: hidden;
 }
 body {
-  height: auto;
   overflow-x: hidden;
 }
 .background {
@@ -577,6 +578,9 @@ label a,
 
 
 /* SETTING CSS */
+.settingmain {
+  height: auto; 
+}
 #tabname::placeholder, #favicon::placeholder{
   color: var(--button-background-light)
 }
@@ -597,7 +601,7 @@ label a,
 }
 .settings {
   width: 70vw;
-  height: 120vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -611,7 +615,6 @@ label a,
 }
 .settingcontainer:hover {
   background-color: #ffffff0c;
-  backdrop-filter: blur(10px);
 }
 .settingName {
   font-family: "Open Sans";
@@ -711,9 +714,10 @@ button:hover {
   font-weight: 500;
   font-size: 1rem;
   padding: 20px;
-}
-footer {
-  margin-bottom: 20vh;
+} 
+.footer {
+  position: absolute;
+  bottom: -900px;
 }
 @media (max-width: 768px) {
   .settingTitle {
@@ -796,8 +800,9 @@ footer {
 
 .transition-fade {
   opacity: 1;
-  transition: 200ms;
+  transition: 250ms;
 }
 html.is-animating .transition-fade {
   opacity: 0;
+  filter: blur(20px);
 }
