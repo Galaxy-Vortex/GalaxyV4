@@ -27,6 +27,7 @@ main {
 }
 body {
   overflow-x: hidden;
+  height: auto;
 }
 .background {
   background-image: url(../bg/3.png);
@@ -800,9 +801,9 @@ button:hover {
 
 .transition-fade {
   opacity: 1;
-  transition: 250ms;
+  transition: 350ms;
 }
 html.is-animating .transition-fade {
   opacity: 0;
-  filter: blur(20px);
+  filter: blur(10px);
 }
