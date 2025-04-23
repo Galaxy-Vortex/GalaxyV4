@@ -1,5 +1,27 @@
 const swup = new Swup();
 function initsettingjs() {
+  function pickRandomGame() {
+    const games = document.querySelectorAll(".game");
+    if (games.length > 0) {
+      // Use crypto.getRandomValues for more randomness
+      const array = new Uint32Array(1);
+      window.crypto.getRandomValues(array);
+      const randomIndex = array[0] % games.length; // Modulo to fit within the array size
+      games[randomIndex].click(); // Simulate a click on the random game
+    }
+  }
+
+  // Add the button click event listener
+  document.addEventListener("DOMContentLoaded", () => {
+    const randomGameButton = document.getElementById("randomGameButton");
+
+    randomGameButton.addEventListener("click", pickRandomGame);
+  }); // Add the button click event listener
+  document.addEventListener("DOMContentLoaded", () => {
+    const randomGameButton = document.getElementById("randomGameButton");
+
+    randomGameButton.addEventListener("click", pickRandomGame);
+  });
   // Check if the autoABToggle element exists
   const autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
@@ -39,14 +61,14 @@ function initsettingjs() {
     .getElementById("tabname")
     .addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
-        localStorage.setItem('tabinput', tabinput.value);
-        let tabInputValue = localStorage.getItem('tabinput');
+        localStorage.setItem("tabinput", tabinput.value);
+        let tabInputValue = localStorage.getItem("tabinput");
         console.log(tabInputValue);
         if (tabInputValue === "") {
-          localStorage.removeItem('tabinput');
+          localStorage.removeItem("tabinput");
           console.log("nothing here");
           chemical.setStore("title", "GalaxyV4");
-          localStorage.setItem('tabinput', "GalaxyV4");
+          localStorage.setItem("tabinput", "GalaxyV4");
         } else {
           console.log(tabInputValue);
           chemical.setStore("title", tabInputValue);
@@ -56,20 +78,20 @@ function initsettingjs() {
     });
 
   document
-  .getElementById("favicon")
-  .addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      let faviconinputvalue = faviconinput.value;
-      if (faviconinputvalue === "") {
-        console.log("nothing here");
-        chemical.setStore("icon", '/global/img/favicon.png')
-      } else {
-        console.log(faviconinputvalue);
-        chemical.setStore("icon", faviconinputvalue)
+    .getElementById("favicon")
+    .addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        let faviconinputvalue = faviconinput.value;
+        if (faviconinputvalue === "") {
+          console.log("nothing here");
+          chemical.setStore("icon", "/global/img/favicon.png");
+        } else {
+          console.log(faviconinputvalue);
+          chemical.setStore("icon", faviconinputvalue);
+        }
+        location.reload();
       }
-      location.reload();
-    }
-  });
+    });
 
   let inIframe;
   try {
@@ -146,7 +168,6 @@ function initsettingjs() {
       ABCloak(true);
     }
   }
-  
 }
 function initGsapAnimations() {
   //gsap stuff
@@ -617,23 +638,23 @@ function initGsapAnimations() {
 }
 
 swup.hooks.on("page:view", () => {
-  localStorage.setItem('tabinput', "GalaxyV4");
-  let tabInputValue = localStorage.getItem('tabinput');
-  console.log(tabInputValue)
-  document.title = tabInputValue; 
-  initsettingjs()
+  localStorage.setItem("tabinput", "GalaxyV4");
+  let tabInputValue = localStorage.getItem("tabinput");
+  console.log(tabInputValue);
+  document.title = tabInputValue;
+  initsettingjs();
   initGsapAnimations();
   const ionicons = document.querySelectorAll("ion-icon");
   ionicons.forEach((icon) => {
     console.log("Ionicon reinitialized:", icon);
   });
-  const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.navigation');
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".navigation");
 
-const handleClick = () => {
-  hamburger.classList.toggle('hamburger--active');
-  nav.classList.toggle('navigation--active');
-}
+  const handleClick = () => {
+    hamburger.classList.toggle("hamburger--active");
+    nav.classList.toggle("navigation--active");
+  };
 
-hamburger.addEventListener('click', handleClick);
+  hamburger.addEventListener("click", handleClick);
 });

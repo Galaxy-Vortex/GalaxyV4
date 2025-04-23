@@ -180,9 +180,19 @@
             </label>
           </div>
         </div>
-        <div class="games"></div>
+        <div class="games">
+          <button onclick="pickRandomGame()">Pick a Random Game</button>
+        </div>
       </div>
-      <p class="notice">All games are carefully tested. If you find one that doesn't work, please notify us in <span class="discordp" onclick="window.location.href='https://discord.gg/xM8FvSAttG';">Discord</span></p>
+      <p class="notice">
+        All games are carefully tested. If you find one that doesn't work,
+        please notify us in
+        <span
+          class="discordp"
+          onclick="window.location.href='https://discord.gg/xM8FvSAttG';"
+          >Discord</span
+        >
+      </p>
       <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
       <script src="/global/js/nav.js"></script>
       <input
@@ -231,17 +241,14 @@
   <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/global/js/jquery.easeScroll.js"></script>
   <script>
-    $("html").easeScroll(
-      {
-        frameRate: 100,
-        animationTime: 2000,
-        stepSize: 100,
-        keyboardSupport:true,
-        arrowScroll: 50,
-        touchpadSupport:true,
-        fixedBackground:true
-      }
-    );
-    </script>      
-
+    $("html").easeScroll({
+      frameRate: 100,
+      animationTime: 2000,
+      stepSize: 100,
+      keyboardSupport: true,
+      arrowScroll: 50,
+      touchpadSupport: true,
+      fixedBackground: true,
+    });
+  </script>
 </html>
