@@ -69,20 +69,10 @@ document.querySelectorAll(".genre-filter").forEach((checkbox) => {
     });
   });
 });
-function pickRandomGame() {
+document.getElementById("randomGameButton").addEventListener("click", () => {
   const games = document.querySelectorAll(".game");
   if (games.length > 0) {
-    // Use crypto.getRandomValues for more randomness
-    const array = new Uint32Array(1);
-    window.crypto.getRandomValues(array);
-    const randomIndex = array[0] % games.length; // Modulo to fit within the array size
-    games[randomIndex].click(); // Simulate a click on the random game
+    const randomIndex = Math.floor(Math.random() * games.length);
+    games[randomIndex].click(); // Trigger a click event on the chosen game
   }
-}
-
-// Add the button click event listener
-document.addEventListener("DOMContentLoaded", () => {
-  const randomGameButton = document.getElementById("randomGameButton");
-
-  randomGameButton.addEventListener("click", pickRandomGame);
 });
