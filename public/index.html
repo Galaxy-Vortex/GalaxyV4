@@ -179,9 +179,14 @@ function tabUnder() {
       <div class="ab" onclick="chemical.aboutBlank('index.html')">
         Open About:Blank
       </div>
-      <div class="ab" onclick="location.reload(true)">
+      <div class="ab" onclick="hardreload()">
         Hard Refresh
       </div>
+      <script>
+        function hardreload() {
+          window.location.href = window.location.origin + window.location.pathname + "?nocache=" + new Date().getTime();
+        }
+      </script>
     </div>
       <section id="controls" is="chemical-controls">
         <button onclick="chemical.componentAction('back', 'web')">Back</button>
