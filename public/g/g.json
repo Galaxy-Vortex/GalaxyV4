@@ -42,6 +42,12 @@
     "genre": "Multiplayer"
   },
   {
+    "name": "Basketball Random",
+    "file": "/global/assets/basket-random",
+    "image": "basketrandom.jpg",
+    "genre": "Casual"
+  },
+  {
     "name": "BitLife",
     "url": "https://www.rapidwebapp.com/game/BitLife/index.html",
     "image": "bitlife.png",
@@ -52,6 +58,12 @@
     "url": "https://games.crazygames.com/en_US/bloons-tower-defense/index.html?v=1.309",
     "image": "bltd.png",
     "genre": "Tower Defense"
+  },
+  {
+    "name": "Boxing Random",
+    "file": "/global/assets/boxing-random",
+    "image": "boxingrandom.jpg",
+    "genre": "Casual"
   },
   {
     "name": "Cluster Rush",
@@ -78,6 +90,12 @@
     "genre": "Other"
   },
   {
+    "name": "Draw the hill",
+    "file": "/global/assets/dth",
+    "image": "dth.jpg",
+    "genre": "Car"
+  },
+  {
     "name": "Drift Hunters",
     "url": "https://htmlxm.github.io/h/drift-hunters/",
     "image": "drift.jpg",
@@ -87,7 +105,7 @@
     "name": "Drive Mad",
     "file": "/global/assets/drive-mad",
     "image": "drivemad.jpg",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "eagtek(Minecraft)",
@@ -102,6 +120,18 @@
     "genre": "Action"
   },
   {
+    "name": "Fruit Ninja",
+    "url": "https://www.coolmathgames.com/sites/default/files/public_games/50823/?gd_sdk_referrer_url=https%3A%2F%2Fwww.coolmathgames.com%2F0-fruit-ninja",
+    "image": "fruit.jpg",
+    "genre": "arcade"
+  },
+  {
+    "name": "GPOP",
+    "url": "https://gpop.io/",
+    "image": "gpop.jpg",
+    "genre": "Rhythm"
+  },
+  {
     "name": "Helix Jump",
     "url": "https://games.crazygames.com/en_US/helix-jump/index.html?v=1.319",
     "image": "helix.jpg",
@@ -109,9 +139,9 @@
   },
   {
     "name": "HexGL",
-    "file": "/global/assets/HexGL",
+    "url": "https://hexgl.decloud.org/",
     "image": "hexgl.png",
-    "genre": "Racing"
+    "genre": "Car"
   },
   {
     "name": "Hole.io",
@@ -196,6 +226,12 @@
     "file": "/global/assets/smashkarts",
     "image": "smash.jpg",
     "genre": "Multiplayer"
+  },
+  {
+    "name": "Soccer Random",
+    "file": "/global/assets/soccer-random",
+    "image": "soccerrandom.jpg",
+    "genre": "Casual"
   },
   {
     "name": "Space Waves",

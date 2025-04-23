@@ -627,5 +627,13 @@ swup.hooks.on("page:view", () => {
   ionicons.forEach((icon) => {
     console.log("Ionicon reinitialized:", icon);
   });
-  
+  const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.navigation');
+
+const handleClick = () => {
+  hamburger.classList.toggle('hamburger--active');
+  nav.classList.toggle('navigation--active');
+}
+
+hamburger.addEventListener('click', handleClick);
 });
