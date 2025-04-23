@@ -10,7 +10,8 @@
     <meta property="og:image" content="/global/img/preview.png">    
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">    <link rel="preload" href="" />
+    <meta http-equiv="Expires" content="0">    
+    <link rel="preload" href="" />
     <link rel="stylesheet" href="/global/css/style.css?=v1" />
     <link rel="stylesheet" href="/global/css/fonts.css" />
     <link rel="stylesheet" href="/global/css/nav.css" />
@@ -178,9 +179,14 @@ function tabUnder() {
           </div>
         </div>
       </section>
+      <div class="bottombtns">
       <div class="ab" onclick="chemical.aboutBlank('index.html')">
         Open About:Blank
       </div>
+      <div class="ab" onclick="location.reload(true)">
+        Hard Refresh
+      </div>
+    </div>
       <section id="controls" is="chemical-controls">
         <button onclick="chemical.componentAction('back', 'web')">Back</button>
         <button onclick="chemical.componentAction('forward', 'web')">

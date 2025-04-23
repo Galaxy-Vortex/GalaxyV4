@@ -227,6 +227,14 @@ body {
   line-height: 1.6;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.bottombtns {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
 .ab {
   padding: 12px 30px;
   border: none;
@@ -235,8 +243,7 @@ body {
   background-color: #ffffff12;
   border: 1px solid var(--input-border);
   border-radius: 7px;
-  margin-top: 10vh;
-  margin-bottom: 15vh;
+  margin: 12vh 2vh;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   transition-duration: 0.2s;
