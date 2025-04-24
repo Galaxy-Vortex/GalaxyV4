@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title is="chemical-title" data-title-store>GalaxyV4</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Galaxy">
@@ -155,7 +156,14 @@
             </label>
           </div>
         </div>
-        <div class="apps"></div>
+        <div class="apps">
+          <div class="randomcard" id="randomGameButton" style="display: none;">
+            <div class="randombg"></div>
+            <div class="randomblob"></div>
+            <p>Surprise me!</p>
+          </div>
+
+        </div>
       </div>
       <iframe id="web" data-controls="controls" is="chemical-iframe"></iframe>
       <script src="../global/js/nav.js"></script>
