@@ -43,6 +43,12 @@
     "genre": "Gaming"
   },
   {
+    "name": "COMET-HANG3R",
+    "url": "https://pxlnovae.pages.dev/",
+    "image": "comet.png",
+    "genre": "exploit"
+  },
+  {
     "name": "Crazy Games",
     "url": "https://crazygames.com",
     "image": "crazygames.jpg",
