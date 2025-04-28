@@ -12,6 +12,12 @@
     "genre": "Streaming"
   },
   {
+    "name": "AnimePahe",
+    "url": "https://animepahe.ru/",
+    "image": "pahe.png",
+    "genre": "Streaming"
+  },
+  {
     "name": "AniWatch",
     "url": "https://ww2.aniwatch.fit/",
     "image": "aniwatch.jpg",
