@@ -10,9 +10,11 @@ fetch("g.json")
 
       gameElement.innerHTML = `
       <div class="innergame">
+      <div class="gamecontainer">
         <img src="/global/img/${game.image}" alt="${game.name}" class="cards" loading="lazy">
         <h3 class="cardname">${game.name}</h3>
         <h2 class="cardgenre">${game.genre}</h2>
+      </div>
       </div>
       `;
 
