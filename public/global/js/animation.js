@@ -63,10 +63,26 @@ gsap.fromTo(
     ease: "expo.inOut",
   }
 );
-gsap.to(".games", {
-  opacity: 1,
-  duration: 0.5,
-  delay: 0.8,
+function gameloadanimation() {
+gsap.fromTo(
+  ".game",
+  {
+    opacity: 0,
+    y: 20,
+  },
+  {
+    stagger: 0.1,
+    opacity: 1,
+    y: 0,
+    duration: 1,
+  }
+);
+}
+window.addEventListener("load", function () {
+    let gameElement = document.querySelector(".game");
+    if (gameElement) {
+        gameloadanimation();
+    }
 });
 gsap.fromTo(
   ".settings1",
@@ -326,8 +342,3 @@ gsap.fromTo(
     ease: "expo.inOut",
   }
 );
-gsap.to(".games", {
-  opacity: 1,
-  duration: 0.5,
-  delay: 0.8,
-});

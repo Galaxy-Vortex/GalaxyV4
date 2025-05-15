@@ -1,4 +1,5 @@
 const swup = new Swup();
+
 function initsettingjs() {
   // Check if the autoABToggle element exists
   const autoABToggle = document.getElementById("autoABToggle");
@@ -214,11 +215,6 @@ function initGsapAnimations() {
       ease: "expo.inOut",
     }
   );
-  gsap.to(".games", {
-    opacity: 1,
-    duration: 0.5,
-    delay: 0.8,
-  });
   gsap.fromTo(
     ".settings1",
     {
@@ -481,12 +477,32 @@ function initGsapAnimations() {
 
         gameElement.innerHTML = `
       <div class="innergame">
+      <div class="gamecontainer">
         <img src="/global/img/${game.image}" alt="${game.name}" class="cards" loading="lazy">
         <h3 class="cardname">${game.name}</h3>
         <h2 class="cardgenre">${game.genre}</h2>
       </div>
+      </div>
       `;
-
+        console.log("game loaded!");
+        function gameloadanimation() {
+          gsap.fromTo(
+            ".game",
+            {
+              opacity: 0,
+              y: 20,
+            },
+            {
+              delay: 0.5,
+              stagger: 0.1,
+              opacity: 1,
+              y: 0,
+              duration: 1,
+            }
+          );
+          console.log("loading games animation...");
+        }
+        gameloadanimation();
         gameElement.addEventListener("click", async () => {
           localStorage.setItem("previous", window.location.href);
           console.log("previous page is " + window.location.href);
@@ -547,9 +563,8 @@ function initGsapAnimations() {
       games[randomIndex].click(); // Trigger a click event on the chosen game
     }
   });
-  
 
-      //app load
+  //app load
   fetch("a.json")
     .then((response) => response.json())
     .then((games) => {
@@ -562,11 +577,31 @@ function initGsapAnimations() {
 
         gameElement.innerHTML = `
       <div class="innergame">
+      <div class="gamecontainer">
         <img src="/global/img/${game.image}" alt="${game.name}" class="cards" loading="lazy">
         <h3 class="cardname">${game.name}</h3>
         <h2 class="cardgenre">${game.genre}</h2>
       </div>
+      </div>
       `;
+        function gameloadanimation() {
+          gsap.fromTo(
+            ".game",
+            {
+              opacity: 0,
+              y: 20,
+            },
+            {
+              delay: 0.5,
+              stagger: 0.1,
+              opacity: 1,
+              y: 0,
+              duration: 1,
+            }
+          );
+          console.log("loading games animation...");
+        }
+        gameloadanimation();
 
         gameElement.addEventListener("click", async () => {
           localStorage.setItem("previous", window.location.href);
@@ -625,10 +660,26 @@ function initGsapAnimations() {
 }
 
 swup.hooks.on("page:view", () => {
+  function gameloadanimation() {
+    gsap.fromTo(
+      ".game",
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        stagger: 0.1,
+        opacity: 1,
+        y: 0,
+        duration: 1,
+      }
+    );
+  }
+
   let tabInputValue = localStorage.getItem("tabinput");
   if (tabInputValue === null) {
-      localStorage.setItem("tabinput", "GalaxyV4");
-      tabInputValue = localStorage.getItem("tabinput"); // Update variable
+    localStorage.setItem("tabinput", "GalaxyV4");
+    tabInputValue = localStorage.getItem("tabinput"); // Update variable
   }
   console.log(tabInputValue);
   document.title = tabInputValue;
@@ -647,6 +698,4 @@ swup.hooks.on("page:view", () => {
   };
 
   hamburger.addEventListener("click", handleClick);
-
-
 });

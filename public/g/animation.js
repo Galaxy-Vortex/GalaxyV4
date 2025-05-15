@@ -64,8 +64,9 @@ gsap.fromTo(
     }
   );
 gsap.to (
-  ".games",
+  ".game",
   {
+    stagger: 0.1,
     opacity: 1,
     duration: 0.5,
     delay: 0.8

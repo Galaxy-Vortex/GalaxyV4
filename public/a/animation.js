@@ -58,3 +58,17 @@ gsap.fromTo(
       delay: 0.8
     }
   );
+            gsap.fromTo(
+            ".game",
+            {
+              opacity: 0,
+              y: 20,
+            },
+            {
+              delay: 0.5,
+              stagger: 0.1,
+              opacity: 1,
+              y: 0,
+              duration: 1,
+            }
+          );
