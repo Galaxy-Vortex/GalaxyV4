@@ -198,3 +198,7 @@
     display: none;
   }
 }
+    .filler {
+      position: absolute;
+      opacity: 0;
+    }
