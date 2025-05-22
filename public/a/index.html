@@ -178,9 +178,14 @@
     <script src="/global/js/jquery.easeScroll.js"></script>
     <script>
       $("html").easeScroll({
-        frameRate: 100,
-        animationTime: 2000,
-        stepSize: 100,
+        frameRate: 60,
+        animationTime: 1000,
+        stepSize: 120,
+        pulseAlgorithm: 1,
+        pulseScale: 8,
+        pulseNormalize: 1,
+        accelerationDelta: 100,
+        accelerationMax: 1.5,
         keyboardSupport: true,
         arrowScroll: 50,
         touchpadSupport: true,

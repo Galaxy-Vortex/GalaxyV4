@@ -78,8 +78,8 @@
       </h1>
       <div class="settings">
         <div class="settingcontainer">
-          <h2 class="settingName">About:Blank Cloaker</h2>
-          <h3 class="settingDesc">About:Blank will hide the website's URL</h3>
+          <h2 class="settingName">Abou<span class="filler">FILLER</span>t:Bla<span class="filler">FILLER</span>nk Clo<span class="filler">FILLER</span>aker</h2>
+          <h3 class="settingDesc">Abou<span class="filler">FILLER</span>t:Bla<span class="filler">FILLER</span>nk will hi<span class="filler">FILLER</span>de the webs<span class="filler">FILLER</span>ite's URL</h3>
           <button
             class="settingBtn"
             onclick="chemical.aboutBlank('index.html')"
@@ -88,10 +88,25 @@
           </button>
         </div>
         <div class="settingcontainer">
-          <h2 class="settingName">Auto Cloaker</h2>
+          <h2 class="settingName">Aut<span class="filler">FILLER</span>o Clo<span class="filler">FILLER</span>aker</h2>
           <h3 class="settingDesc">
-            Automatically launches About:Blank, preventing the website from
-            appearing in your history
+            Auto<span class="filler">FILLER</span>mat<span class="filler">FILLER</span>ica<span class="filler">FILLER</span>lly laun<span class="filler">FILLER</span>ches Abou<span class="filler">FILLER</span>t:Bl<span class="filler">FILLER</span>ank, pre<span class="filler">FILLER</span>ven<span class="filler">FILLER</span>ting the webs<span class="filler">FILLER</span>ite from
+            appe<span class="filler">FILLER</span>aring in your history
+          </h3>
+          <input
+            type="checkbox"
+            id="autoABToggle"
+            data-on="ON"
+            data-off="OFF"
+            role="switch"
+            class="circle"
+            onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'; console.log('AB Clicked!')"
+          />
+        </div>
+  <!--  <div class="settingcontainer">
+          <h2 class="settingName">An<span class="filler">FILLER</span>ti-C<span class="filler">FILLER</span>lose</h2>
+          <h3 class="settingDesc">
+            Prevents tab from closing by launching "Work may not be saved" prompt
           </h3>
           <input
             type="checkbox"
@@ -103,12 +118,12 @@
             onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'; console.log('AB Clicked!')"
             class="settingButton"
           />
-        </div>
+        </div>-->
         <div class="settingcontainer">
           <h2 class="settingName">Title</h2>
           <h3 class="settingDesc">
-            Change tab name. Set name as empty to reset
-            <span style="color: #e43333">*Does not work in about:blank</span>
+            Cha<span class="filler">FILLER</span>nge tab name. Set nam<span class="filler">FILLER</span>e as em<span class="filler">FILLER</span>ty to r<span class="filler">FILLER</span>eset
+            <span style="color: #e43333">*Do<span class="filler">FILLER</span>es not work in a<span class="filler">FILLER</span>bou<span class="filler">FILLER</span>t:b<span class="filler">FILLER</span>lank</span>
           </h3>
           <input
             class="gamesearch"
@@ -120,8 +135,8 @@
         <div class="settingcontainer">
           <h2 class="settingName">Favicon</h2>
           <h3 class="settingDesc">
-            Change tab icon. Set as empty to reset
-            <span style="color: #e43333">*Does not work in about:blank</span>
+            Chang<span class="filler">FILLER</span>e tab icon. Set as emp<span class="filler">FILLER</span>ty to reset
+            <span style="color: #e43333">*Doe<span class="filler">FILLER</span>s not work in abo<span class="filler">FILLER</span>ut:b<span class="filler">FILLER</span>lank</span>
           </h3>
           <input
             class="gamesearch"
@@ -133,8 +148,8 @@
       </div>
       <div class="footer">
         <a class="pp" href="../pp/">Privacy Policy</a
-        ><a class="pp" href="https://discord.gg/xM8FvSAttG">Discord</a
-        ><a class="pp" href="https://github.com/r480github/GalaxyV4">Github</a>
+        ><a class="pp" href="https://discord.gg/xM8FvSAttG">Dis<span class="filler">FILLER</span>cord</a
+        ><a class="pp" href="https://github.com/r480github/GalaxyV4">Gi<span class="filler">FILLER</span>thub</a>
       </div>
     </main>
   </body>
@@ -206,9 +221,14 @@
 <script src="/global/js/jquery.easeScroll.js"></script>
 <script>
   $("html").easeScroll({
-    frameRate: 100,
-    animationTime: 2000,
-    stepSize: 100,
+    frameRate: 60,
+    animationTime: 1000,
+    stepSize: 120,
+    pulseAlgorithm: 1,
+    pulseScale: 8,
+    pulseNormalize: 1,
+    accelerationDelta: 100,
+    accelerationMax: 1.5,
     keyboardSupport: true,
     arrowScroll: 50,
     touchpadSupport: true,

@@ -200,15 +200,20 @@
   </body>
   <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/global/js/jquery.easeScroll.js"></script>
-  <script>
-    $("html").easeScroll({
-      frameRate: 100,
-      animationTime: 2000,
-      stepSize: 100,
-      keyboardSupport: true,
-      arrowScroll: 50,
-      touchpadSupport: true,
-      fixedBackground: true,
-    });
-  </script>
+    <script>
+      $("html").easeScroll({
+        frameRate: 60,
+        animationTime: 1000,
+        stepSize: 120,
+        pulseAlgorithm: 1,
+        pulseScale: 8,
+        pulseNormalize: 1,
+        accelerationDelta: 100,
+        accelerationMax: 1.5,
+        keyboardSupport: true,
+        arrowScroll: 50,
+        touchpadSupport: true,
+        fixedBackground: true,
+      });
+    </script>
 </html>

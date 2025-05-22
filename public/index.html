@@ -173,7 +173,7 @@
       </section>
       <div class="bottombtns">
         <div class="ab" onclick="chemical.aboutBlank('index.html')">
-          &#79;&#112;&#101;&#110;&#32;&#65;&#98;&#111;&#117;&#116;&#58;&#66;&#108;&#97;&#110;&#107;
+          Op<span class="filler">FILLER</span>en Abo<span class="filler">FILLER</span>ut:Bla<span class="filler">FILLER</span>nk
         </div>
         <div class="ab" onclick="hardreload()">Clear Cache</div>
         <script>
@@ -216,11 +216,17 @@
     <script src="/global/js/jquery.easeScroll.js"></script>
     <script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
     <!--<script src="/global/js/parallax.js"></script> -->
+
     <script>
       $("html").easeScroll({
-        frameRate: 100,
-        animationTime: 2000,
-        stepSize: 40,
+        frameRate: 60,
+        animationTime: 1000,
+        stepSize: 120,
+        pulseAlgorithm: 1,
+        pulseScale: 8,
+        pulseNormalize: 1,
+        accelerationDelta: 100,
+        accelerationMax: 1.5,
         keyboardSupport: true,
         arrowScroll: 50,
         touchpadSupport: true,
