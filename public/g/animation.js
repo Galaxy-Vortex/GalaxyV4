@@ -63,12 +63,16 @@ gsap.fromTo(
       ease: "expo.inOut",
     }
   );
-gsap.to (
+gsap.fromTo(
   ".game",
   {
-    stagger: 0.1,
+    opacity: 0,
+    y: 20,
+  },
+  {
+    stagger: 0.09,
     opacity: 1,
-    duration: 0.5,
-    delay: 0.8
+    y: 0,
+    duration: 1,
   }
 );

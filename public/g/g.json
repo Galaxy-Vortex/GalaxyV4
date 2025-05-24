@@ -150,6 +150,12 @@
     "genre": "Multiplayer"
   },
   {
+    "name": "Just a Platformer",
+    "file": "/global/assets/jap",
+    "image": "jap.png",
+    "genre": "platformer"
+  },
+  {
     "name": "Madalin Stunt Cars",
     "url": "https://games.crazygames.com/en_US/madalin-stunt-cars-2/index.html?v=1.328/",
     "image": "madalin.jpg",

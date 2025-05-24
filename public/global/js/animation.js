@@ -71,7 +71,7 @@ gsap.fromTo(
     y: 20,
   },
   {
-    stagger: 0.1,
+    stagger: 0.09,
     opacity: 1,
     y: 0,
     duration: 1,
