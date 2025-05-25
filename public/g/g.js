@@ -29,6 +29,9 @@ fetch("g.json")
           var fil = game.file;
           localStorage.setItem("gameload", fil);
           window.location.href = "/load";
+        } else if (game.name === "Just a Platformer") {
+          
+          window.location.href = "/load/jap.html";
         }
       });
 

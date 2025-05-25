@@ -516,7 +516,10 @@ function initGsapAnimations() {
             var fil = game.file;
             localStorage.setItem("gameload", fil);
             window.location.href = "/load";
-          }
+          } else if (game.name === "Just a Platformer") {
+          console.log("IT'S WORKING!!!");
+          window.location.href = "/load/jap.html";
+        }
         });
 
         appsContainer.appendChild(gameElement);
@@ -603,21 +606,19 @@ function initGsapAnimations() {
         }
         gameloadanimation();
 
-        gameElement.addEventListener("click", async () => {
-          localStorage.setItem("previous", window.location.href);
-          console.log("previous page is " + window.location.href);
-          if (game.url) {
-            var ute = game.url;
-            document.getElementById("search").value = ute;
-            document.getElementById("submitbutton").click();
-            document.getElementById("web").style.visibility = "visible";
-            document.getElementById("controls").style.visibility = "visible";
-          } else if (game.file) {
-            var fil = game.file;
-            localStorage.setItem("gameload", fil);
-            window.location.href = "/load";
-          }
-        });
+      gameElement.addEventListener("click", async () => {
+        localStorage.setItem("previous", window.location.href);
+        console.log("previous page is " + window.location.href);
+        if (game.url) {
+          var ute = game.url;
+          document.getElementById("search").value = ute;
+          document.getElementById("submitbutton").click();
+        } else if (game.file) {
+          var fil = game.file;
+          localStorage.setItem("gameload", fil);
+          window.location.href = "/load";
+        } 
+      });
 
         appsContainer.appendChild(gameElement);
       });

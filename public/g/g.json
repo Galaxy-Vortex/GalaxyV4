@@ -151,7 +151,6 @@
   },
   {
     "name": "Just a Platformer",
-    "file": "/global/assets/jap",
     "image": "jap.png",
     "genre": "platformer"
   },
@@ -371,4 +370,5 @@
     "image": "xx.jpg",
     "genre": "Casual"
   }
+  
 ]
