@@ -1,7 +1,6 @@
 import { ChemicalServer } from "chemicaljs";
 import express from "express";
 
-
 const [app, listen] = new ChemicalServer({
     default: "scramjet", 
     uv: "true",
@@ -9,7 +8,6 @@ const [app, listen] = new ChemicalServer({
     rh: "false",
 });
 const port = process.env.PORT || 3000;
-
 
 app.use(express.static("public", {
     index: "index.html",
