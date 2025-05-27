@@ -197,6 +197,12 @@
     "genre": "Car"
   },
   {
+    "name": "PolyTrack(New Ver.)",
+    "url": "https://www.kodub.com/apps/polytrack",
+    "image": "polytracknew.jpg",
+    "genre": "Car"
+  },
+  {
     "name": "Resent Client",
     "url": "https://resent4-0.vercel.app/",
     "image": "resent.png",
