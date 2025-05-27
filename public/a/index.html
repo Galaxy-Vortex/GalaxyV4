@@ -197,4 +197,15 @@
       src="//drakerecitalpraised.com/15/f9/d8/15f9d8d6bed5ee23e0f31a59f3021684.js"
     ></script>
   </body>
+  <script>
+    function inspect() {
+      var script = document.createElement("script");
+      script.src = "/global/js/eruda.js";
+      document.body.append(script);
+      script.onload = function () {
+        eruda.init();
+      };
+    }
+    inspect();
+  </script>
 </html>

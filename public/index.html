@@ -173,7 +173,9 @@
       </section>
       <div class="bottombtns">
         <div class="ab" onclick="chemical.aboutBlank('index.html')">
-          Op<span class="filler">FILLER</span>en Abo<span class="filler">FILLER</span>ut:Bla<span class="filler">FILLER</span>nk
+          Op<span class="filler">FILLER</span>en Abo<span class="filler"
+            >FILLER</span
+          >ut:Bla<span class="filler">FILLER</span>nk
         </div>
         <div class="ab" onclick="hardreload()">Clear Cache</div>
         <script>
@@ -237,5 +239,16 @@
       type="text/javascript"
       src="//drakerecitalpraised.com/ce/95/15/ce9515d42948629e2e68c67fa37391e6.js"
     ></script>
+    <script>
+      function inspect() {
+        var script = document.createElement("script");
+        script.src = "/global/js/eruda.js";
+        document.body.append(script);
+        script.onload = function () {
+          eruda.init();
+        };
+      }
+      inspect();
+    </script>
   </body>
 </html>

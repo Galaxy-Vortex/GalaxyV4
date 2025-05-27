@@ -141,8 +141,8 @@
         </div>
       </div>
       <p class="notice">
-        All G<span class="filler">FILLER</span><span>ames</span> are carefully tested. If you find one that doesn't work,
-        please notify us in
+        All G<span class="filler">FILLER</span><span>ames</span> are carefully
+        tested. If you find one that doesn't work, please notify us in
         <span
           class="discordp"
           onclick="window.location.href='https://discord.gg/xM8FvSAttG';"
@@ -200,20 +200,31 @@
   </body>
   <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/global/js/jquery.easeScroll.js"></script>
-    <script>
-      $("html").easeScroll({
-        frameRate: 60,
-        animationTime: 1000,
-        stepSize: 120,
-        pulseAlgorithm: 1,
-        pulseScale: 8,
-        pulseNormalize: 1,
-        accelerationDelta: 100,
-        accelerationMax: 1.5,
-        keyboardSupport: true,
-        arrowScroll: 50,
-        touchpadSupport: true,
-        fixedBackground: true,
-      });
-    </script>
+  <script>
+    $("html").easeScroll({
+      frameRate: 60,
+      animationTime: 1000,
+      stepSize: 120,
+      pulseAlgorithm: 1,
+      pulseScale: 8,
+      pulseNormalize: 1,
+      accelerationDelta: 100,
+      accelerationMax: 1.5,
+      keyboardSupport: true,
+      arrowScroll: 50,
+      touchpadSupport: true,
+      fixedBackground: true,
+    });
+  </script>
+  <script>
+    function inspect() {
+      var script = document.createElement("script");
+      script.src = "/global/js/eruda.js";
+      document.body.append(script);
+      script.onload = function () {
+        eruda.init();
+      };
+    }
+    inspect();
+  </script>
 </html>
