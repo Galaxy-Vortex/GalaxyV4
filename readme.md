@@ -33,7 +33,7 @@ npm i
 ```bash
 npm start
 ```
-#### NOTE: The dafault port for GalaxyV4 is 3000. You can visit it by typing localhost:3000/ into a web browser
+#### NOTE: The dafault port for GalaxyV4 is 3000. You can visit it by typing localhost:3000/ into a web browser. Editing the port inside app.js, will change the port. Please do this if you run into an issue that says your port is closed/busy.
 <br>
     
 ## You can also deploy Galaxy on Koyeb(For Free)
