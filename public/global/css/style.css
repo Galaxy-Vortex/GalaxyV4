@@ -781,6 +781,35 @@ label a,
 button:hover {
   box-shadow: 0 0 30px var(--input-border);
 }
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  height: 0vh;
+  width: 20vh;
+  transition: 0.3s;
+}
+.dropdown a {
+  font-family: Open Sans;
+  transition: 0.4s;
+    background-color: #0000004f;
+
+}
+.dropdown a:hover {
+      background-color: #00000002;
+}
+.tabpresets {
+  text-align: center;
+  cursor: pointer;
+  padding: 14px;
+}
+.settingcontainer:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  height: 305px;
+}
 .pp {
   color: var(--h1);
   font-family: "Open Sans";
