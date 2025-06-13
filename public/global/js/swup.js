@@ -1,6 +1,7 @@
 const swup = new Swup();
 
 function initsettingjs() {
+  
   // Check if the autoABToggle element exists
   const autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
@@ -17,60 +18,74 @@ function initsettingjs() {
     console.warn("Tab Input element not found. Stopping script.");
     return; // Exit the script
   }
+// Function to update favicon and store it in localStorage
+function updateFaviconFromInput() {
+    const input = document.getElementById("favicon");
+    if (input) {
+        const faviconUrl = input.value.trim();
+        if (faviconUrl) {
+            const link = document.querySelector("link[rel~='icon']") || document.createElement("link");
+            link.rel = "icon";
+            link.href = faviconUrl;
+            document.head.appendChild(link);
 
-  // Initialize localStorage value if not already set
+            // Store value in localStorage
+            localStorage.setItem("faviconInputValue", faviconUrl);
+        }
+    }
+}
+
+// Function to update tab title and store it in localStorage
+function updateTitleFromInput() {
+    const input = document.getElementById("tabname");
+    if (input) {
+        const newTitle = input.value.trim() || "GalaxyV4"; // Default to GalaxyV4 if empty
+        document.title = newTitle;
+
+        // Store value in localStorage
+        localStorage.setItem("tabInputValue", newTitle);
+    }
+}
+
+// Load saved values on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedFavicon = localStorage.getItem("faviconInputValue");
+    const savedTitle = localStorage.getItem("tabInputValue") || "GalaxyV4"; // Default if empty
+
+    if (savedFavicon) {
+        const link = document.querySelector("link[rel~='icon']") || document.createElement("link");
+        link.rel = "icon";
+        link.href = savedFavicon;
+        document.head.appendChild(link);
+    }
+
+    if (savedTitle) {
+        document.title = savedTitle;
+    }
+});
+
+// Attach event listeners
+document.getElementById("favicon")?.addEventListener("input", updateFaviconFromInput);
+document.getElementById("tabname")?.addEventListener("input", updateTitleFromInput);
   if (localStorage.getItem("autoAB") === null) {
     localStorage.setItem("autoAB", "false");
   }
 
   // Set the checkbox based on localStorage value
-  autoABToggle.checked = localStorage.getItem("autoAB") === "true";
-
+  document.getElementById("autoABToggle").checked =
+    localStorage.getItem("autoAB") === "true";
   // Update localStorage value when the checkbox is changed
-  autoABToggle.addEventListener("change", function () {
-    localStorage.setItem("autoAB", this.checked);
-    if (this.checked) {
-      checkPopupsBlocked();
-      location.reload();
-      console.log("AB Updated!");
-    }
-  });
-
   document
-    .getElementById("tabname")
-    .addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        localStorage.setItem("tabinput", tabinput.value);
-        let tabInputValue = localStorage.getItem("tabinput");
-        console.log(tabInputValue);
-        if (tabInputValue === "") {
-          localStorage.removeItem("tabinput");
-          console.log("nothing here");
-          chemical.setStore("title", "GalaxyV4");
-          localStorage.setItem("tabinput", "GalaxyV4");
-        } else {
-          console.log(tabInputValue);
-          chemical.setStore("title", tabInputValue);
-        }
+    .getElementById("autoABToggle")
+    .addEventListener("change", function () {
+      localStorage.setItem("autoAB", this.checked);
+      if (this.checked) {
+        checkPopupsBlocked();
         location.reload();
+        console.log("AB Updated!");
       }
     });
 
-  document
-    .getElementById("favicon")
-    .addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        let faviconinputvalue = faviconinput.value;
-        if (faviconinputvalue === "") {
-          console.log("nothing here");
-          chemical.setStore("icon", "/global/img/favicon.png");
-        } else {
-          console.log(faviconinputvalue);
-          chemical.setStore("icon", faviconinputvalue);
-        }
-        location.reload();
-      }
-    });
 
   let inIframe;
   try {
@@ -677,10 +692,10 @@ swup.hooks.on("page:view", () => {
     );
   }
 
-  let tabInputValue = localStorage.getItem("tabinput");
+  let tabInputValue = localStorage.getItem("tabInputValue");
   if (tabInputValue === null) {
-    localStorage.setItem("tabinput", "GalaxyV4");
-    tabInputValue = localStorage.getItem("tabinput"); // Update variable
+    localStorage.setItem("tabInputValue", "GalaxyV4");
+    tabInputValue = localStorage.getItem("tabInputValue"); // Update variable
   }
   console.log(tabInputValue);
   document.title = tabInputValue;
