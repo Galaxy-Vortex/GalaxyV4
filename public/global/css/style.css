@@ -32,6 +32,7 @@ body {
 .background {
   background-image: url(../bg/3.png);
   background-repeat: no-repeat;
+ background-size: cover;
   position: fixed;
   height: 100vh;
   top: 0;
