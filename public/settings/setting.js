@@ -17,11 +17,14 @@ function ABCloak(redirectToEducationalSite) {
         const iframe = doc.createElement("iframe");
         const style = iframe.style;
         const link = doc.createElement("link");
-        const savedFavicon = localStorage.getItem("faviconInputValue" || "https://ssl.gstatic.com/classroom/favicon.png");
-        const savedTitle = localStorage.getItem("tabInputValue") || "Google Classroom"; // Default if empty
+        const savedFavicon = localStorage.getItem(
+          "faviconInputValue" || "https://ssl.gstatic.com/classroom/favicon.png"
+        );
+        const savedTitle =
+          localStorage.getItem("tabInputValue") || "Google Classroom"; // Default if empty
 
         var name = savedTitle;
-        var icon = savedFavicon ;
+        var icon = savedFavicon;
         if (localStorage.getItem("cloakTitle") !== null) {
           name = localStorage.getItem("cloakTitle");
           icon = localStorage.getItem("cloakIcon");
@@ -109,7 +112,7 @@ function tabpresets(title, faviconURL) {
   // Store values in localStorage
   localStorage.setItem("tabInputValue", title);
   localStorage.setItem("faviconInputValue", faviconURL);
-};
+}
 // Function to update favicon and store it in localStorage
 function updateFaviconFromInput() {
   const input = document.getElementById("favicon");
@@ -167,3 +170,10 @@ document
 document
   .getElementById("tabname")
   ?.addEventListener("input", updateTitleFromInput);
+
+function checkBrowser() {
+  if (navigator.userAgent.toLowerCase().includes("firefox")) {
+    document.querySelector(".gradient-container").style.display = "none";
+  }
+}
+checkBrowser()

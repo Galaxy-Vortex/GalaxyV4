@@ -1,7 +1,6 @@
 const swup = new Swup();
 
 function initsettingjs() {
-  
   // Check if the autoABToggle element exists
   const autoABToggle = document.getElementById("autoABToggle");
   if (!autoABToggle) {
@@ -18,55 +17,63 @@ function initsettingjs() {
     console.warn("Tab Input element not found. Stopping script.");
     return; // Exit the script
   }
-// Function to update favicon and store it in localStorage
-function updateFaviconFromInput() {
+  // Function to update favicon and store it in localStorage
+  function updateFaviconFromInput() {
     const input = document.getElementById("favicon");
     if (input) {
-        const faviconUrl = input.value.trim();
-        if (faviconUrl) {
-            const link = document.querySelector("link[rel~='icon']") || document.createElement("link");
-            link.rel = "icon";
-            link.href = faviconUrl;
-            document.head.appendChild(link);
-
-            // Store value in localStorage
-            localStorage.setItem("faviconInputValue", faviconUrl);
-        }
-    }
-}
-
-// Function to update tab title and store it in localStorage
-function updateTitleFromInput() {
-    const input = document.getElementById("tabname");
-    if (input) {
-        const newTitle = input.value.trim() || "GalaxyV4"; // Default to GalaxyV4 if empty
-        document.title = newTitle;
+      const faviconUrl = input.value.trim();
+      if (faviconUrl) {
+        const link =
+          document.querySelector("link[rel~='icon']") ||
+          document.createElement("link");
+        link.rel = "icon";
+        link.href = faviconUrl;
+        document.head.appendChild(link);
 
         // Store value in localStorage
-        localStorage.setItem("tabInputValue", newTitle);
+        localStorage.setItem("faviconInputValue", faviconUrl);
+      }
     }
-}
+  }
 
-// Load saved values on page load
-document.addEventListener("DOMContentLoaded", () => {
+  // Function to update tab title and store it in localStorage
+  function updateTitleFromInput() {
+    const input = document.getElementById("tabname");
+    if (input) {
+      const newTitle = input.value.trim() || "GalaxyV4"; // Default to GalaxyV4 if empty
+      document.title = newTitle;
+
+      // Store value in localStorage
+      localStorage.setItem("tabInputValue", newTitle);
+    }
+  }
+
+  // Load saved values on page load
+  document.addEventListener("DOMContentLoaded", () => {
     const savedFavicon = localStorage.getItem("faviconInputValue");
     const savedTitle = localStorage.getItem("tabInputValue") || "GalaxyV4"; // Default if empty
 
     if (savedFavicon) {
-        const link = document.querySelector("link[rel~='icon']") || document.createElement("link");
-        link.rel = "icon";
-        link.href = savedFavicon;
-        document.head.appendChild(link);
+      const link =
+        document.querySelector("link[rel~='icon']") ||
+        document.createElement("link");
+      link.rel = "icon";
+      link.href = savedFavicon;
+      document.head.appendChild(link);
     }
 
     if (savedTitle) {
-        document.title = savedTitle;
+      document.title = savedTitle;
     }
-});
+  });
 
-// Attach event listeners
-document.getElementById("favicon")?.addEventListener("input", updateFaviconFromInput);
-document.getElementById("tabname")?.addEventListener("input", updateTitleFromInput);
+  // Attach event listeners
+  document
+    .getElementById("favicon")
+    ?.addEventListener("input", updateFaviconFromInput);
+  document
+    .getElementById("tabname")
+    ?.addEventListener("input", updateTitleFromInput);
   if (localStorage.getItem("autoAB") === null) {
     localStorage.setItem("autoAB", "false");
   }
@@ -85,7 +92,6 @@ document.getElementById("tabname")?.addEventListener("input", updateTitleFromInp
         console.log("AB Updated!");
       }
     });
-
 
   let inIframe;
   try {
@@ -395,6 +401,7 @@ function initGsapAnimations() {
     duration: 1.2,
     ease: "expo.inOut",
   });
+
   gsap.fromTo(
     ".gradient-3",
     {
@@ -532,9 +539,9 @@ function initGsapAnimations() {
             localStorage.setItem("gameload", fil);
             window.location.href = "/load";
           } else if (game.name === "Just a Platformer") {
-          console.log("IT'S WORKING!!!");
-          window.location.href = "/load/jap.html";
-        }
+            console.log("IT'S WORKING!!!");
+            window.location.href = "/load/jap.html";
+          }
         });
 
         appsContainer.appendChild(gameElement);
@@ -621,19 +628,19 @@ function initGsapAnimations() {
         }
         gameloadanimation();
 
-      gameElement.addEventListener("click", async () => {
-        localStorage.setItem("previous", window.location.href);
-        console.log("previous page is " + window.location.href);
-        if (game.url) {
-          var ute = game.url;
-          document.getElementById("search").value = ute;
-          document.getElementById("submitbutton").click();
-        } else if (game.file) {
-          var fil = game.file;
-          localStorage.setItem("gameload", fil);
-          window.location.href = "/load";
-        } 
-      });
+        gameElement.addEventListener("click", async () => {
+          localStorage.setItem("previous", window.location.href);
+          console.log("previous page is " + window.location.href);
+          if (game.url) {
+            var ute = game.url;
+            document.getElementById("search").value = ute;
+            document.getElementById("submitbutton").click();
+          } else if (game.file) {
+            var fil = game.file;
+            localStorage.setItem("gameload", fil);
+            window.location.href = "/load";
+          }
+        });
 
         appsContainer.appendChild(gameElement);
       });
@@ -676,6 +683,7 @@ function initGsapAnimations() {
 }
 
 swup.hooks.on("page:view", () => {
+
   function gameloadanimation() {
     gsap.fromTo(
       ".game",

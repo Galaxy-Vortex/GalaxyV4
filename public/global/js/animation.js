@@ -263,6 +263,11 @@ gsap.fromTo(
     ease: "expo.inOut",
   }
 );
+  function checkBrowser() {
+    if (navigator.userAgent.toLowerCase().includes("firefox")) {
+      document.querySelector(".gradient-container").style.display = "none";
+    }
+  }
 gsap.fromTo(
   ".gradient-3",
   {
